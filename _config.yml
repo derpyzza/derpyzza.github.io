@@ -28,7 +28,7 @@ twitter_username: derpyzza
 github_username:  derpyzza
 
 # Build settings
-theme: minima
+theme: jekyll-theme-tactile
 plugins:
   - jekyll-feed
 
