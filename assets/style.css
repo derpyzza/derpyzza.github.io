@@ -1,5 +1,5 @@
 :root {
-  --accent: #8c60be;
+  --accent: #D1795C  ;
   --light: #f7f7f7;
   --light-gray: #e6e6e6;
   --dark: #1d1d1d;
@@ -101,6 +101,12 @@ blockquote {
   text-rendering: optimizeLegibility;
 }
 
+.blogpyzza {
+  color: var(--accent);
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -117,6 +123,10 @@ blockquote {
   /* border-radius: 50%; */
   object-fit: cover;
   object-position: center;
+  transition: transform 2s ease;
+}
+.icon:hover {
+  transform: rotateZ(720deg);
 }
 .posts {
   display: flex;
@@ -144,10 +154,12 @@ blockquote {
   width: 90%;
   border-radius: 15px;
   border-bottom: 1px solid var(--accent);
+  transition: transform 0.1s ease-in;
 }
 
 .post:hover {
   background: #E8E8E8;
+  transform: translate(0, -5px);
 }
 
 @media screen and (min-width:800px) {
