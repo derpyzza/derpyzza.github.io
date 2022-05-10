@@ -1,5 +1,8 @@
 :root {
-  --background: #2e2e3f;
+  --accent: #8c60be;
+  --light: #f7f7f7;
+  --dark: #1d1d1d;
+  --gray: #6f6f6f;
 }
 
 * {
@@ -7,8 +10,8 @@ box-sizing: inherit;
 }
 /* raw elements */
 body {
-  color: #1d1d1d;
-  background: #f7f7f7; 
+  color: var(--dark);
+  background: var(--light); 
   padding: 0;
   margin: 0;
   font-family: 'Fira Code';
@@ -21,11 +24,12 @@ aside {
   margin: 0;
   padding: 0;
   width: 9rem;
+  hyphens: none;
 }
 code {
   display: block;
-  color: white;
-  background: #1d1d1d;
+  color: var(--light);
+  background: var(--dark);
   font-size: 1rem;
   padding: 1rem;
   padding-right: 0;
@@ -35,26 +39,34 @@ h2 {
   margin-bottom: -0.7rem;
 }
 a {
-  color: #1d1d1d;
-  /* background: #1d1d1d; */
+  color: var(--accent);
+  /* background: var(--dark); */
   /* padding-left: 3px; */
   /* padding-right: 3px; */
   text-decoration: none;
+  /* font-style: italic; */
+  /* border-bottom: 0.1rem solid var(--accent); */
 }
 blockquote {
   padding: 0.7rem;
   margin-left: 0;
   border-left: 0.5rem solid rgb(191, 124, 207);;
-  color: #f7f7f7;
-  background: #1b1b1b;
+  color: var(--light);
+  background: var(--dark);
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 14rem;
+  padding: 0.1rem;
+}
 .main {
-  /* background: var(--background); */
   position: relative;
   display: block;
   border-radius: 10px;
@@ -78,14 +90,14 @@ blockquote {
   color:#535353;
 }
 .title {
-  color: rgb(157, 71, 179);
+  color: var(--accent)  ;
   margin: 5px;
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  border-top: solid 1px rgb(191, 124, 207);
+  border-top: solid 1px var(--accent);
   padding-top: 5px;
 }
 
@@ -105,12 +117,14 @@ blockquote {
   align-items: center;
 }
 .post {
+  color: var(--dark);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 80%;
   height: 100px;
   padding: 20px;
+  border-radius: 15px;
 }
 .post:hover {
   background: #E8E8E8;
@@ -119,3 +133,16 @@ blockquote {
   display: flex;
   justify-content: space-between;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --light: #1b1b1b;
+    --dark: #f7f7f7;
+  }
+
+  code, blockquote {
+    background: var(--light);
+    color: var(--dark);
+    border: 1px solid var(--accent);
+  }
+} */
