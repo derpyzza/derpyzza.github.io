@@ -1,6 +1,7 @@
 :root {
   --accent: #8c60be;
   --light: #f7f7f7;
+  --light-gray: #e6e6e6;
   --dark: #1d1d1d;
   --gray: #6f6f6f;
 }
@@ -17,42 +18,49 @@ body {
   font-family: 'Fira Code';
 }
 aside {
-  color: #6f6f6f;
-  position: absolute;
-  right: 0;
+  color: var(--accent);
+  background: var(--light-gray);
   text-align: left;
-  margin: 0;
-  padding: 0;
-  width: 9rem;
+  margin: 0.5rem;
+  padding: 1rem;
   hyphens: none;
 }
 code {
   display: block;
   color: var(--light);
   background: var(--dark);
+  overflow-x: auto;
   font-size: 1rem;
   padding: 1rem;
-  padding-right: 0;
+  padding-left: 0;
   border-radius: 10px;
 }
-h2 {
-  margin-bottom: -0.7rem;
-}
+ p > code,
+ li > code,
+ dd > code,
+ td > code,
+ strong > code {
+   display: inline;
+   overflow-x: none;
+   padding: 0;
+   margin: 0;
+   border-radius: 0;
+ }
 a {
   color: var(--accent);
-  /* background: var(--dark); */
-  /* padding-left: 3px; */
-  /* padding-right: 3px; */
   text-decoration: none;
-  /* font-style: italic; */
-  /* border-bottom: 0.1rem solid var(--accent); */
 }
 blockquote {
   padding: 0.7rem;
-  margin-left: 0;
+  margin: 0.5rem;
   border-left: 0.5rem solid rgb(191, 124, 207);;
+  text-align: left;
   color: var(--light);
   background: var(--dark);
+}
+.page {
+  padding: 1rem;
+  min-height: 100vw;
 }
 .header {
   display: flex;
@@ -67,12 +75,7 @@ blockquote {
   padding: 0.1rem;
 }
 .main {
-  position: relative;
-  display: block;
-  border-radius: 10px;
-  max-width: calc(70ch + 10.5rem);
-  padding-right: 10.5rem;
-  margin: auto;
+  text-align: left;
 }
 .titlebox {
   display: flex;
@@ -86,12 +89,16 @@ blockquote {
   flex-direction: column;
   align-items: center;
 }
+.subtitle {
+  word-wrap: break-word;
+}
 .date {
   color:#535353;
 }
 .title {
-  color: var(--accent)  ;
-  margin: 5px;
+  color: var(--accent);
+  text-align: center;
+  text-rendering: optimizeLegibility;
 }
 
 .footer {
@@ -116,22 +123,31 @@ blockquote {
   flex-direction: column;
   align-items: center;
 }
+
+.post-title > h2, h4 {
+  margin: 10px;
+  margin-left: 0px;
+}
+.post-title > h4 {
+  color: var(--gray);
+}
+.post-title > h2 {
+  color: var(--accent);
+}
 .post {
   color: var(--dark);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 80%;
-  height: 100px;
-  padding: 20px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  width: 90%;
   border-radius: 15px;
+  border-bottom: 1px solid var(--accent);
 }
+
 .post:hover {
   background: #E8E8E8;
-}
-.post-title {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* @media (prefers-color-scheme: dark) {
