@@ -4,7 +4,7 @@ $subtitle a small minimal test file
 
 ## Testing text
 
- ***Lorem ipsum dolor sit amet***, -> != consectetur adipiscing elit. Pellentesque consequat vel massa non malesuada. Nunc ultricies lorem in maximus accumsan. Vestibulum suscipit odio sit amet ex accumsan tristique. Curabitur eget aliquet nibh. Donec ultrices nec nunc eu pellentesque. Donec varius nibh [vitae](derpyzza.github.io) pretium luctus. 
+ ***Lorem ipsum `dolor()` sit amet***, -> != consectetur adipiscing elit. Pellentesque consequat vel massa non malesuada. Nunc ultricies lorem in maximus accumsan. Vestibulum suscipit odio sit amet ex accumsan tristique. Curabitur eget aliquet nibh. Donec ultrices nec nunc eu pellentesque. Donec varius nibh [vitae](derpyzza.github.io) pretium luctus. 
 <aside>
   this is a very very very long aside note plus extra words to make it longer for testing purposes
 </aside>
@@ -12,13 +12,16 @@ Donec dictum felis magna, quis vestibulum ex vestibulum sed. Vestibulum commodo 
 
 ```vscode-default c
     int main(void){
+      /* making this code extra long too for 
+         testing purposes heck yeah testing purposes lets
+         goo extra words extra words extra words */
         return 0;
     }
 ```
 
 ## Second paragraph {#other}
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent vitae hendrerit est. Mauris aliquet tortor ut elit ullamcorper porta. Nam a pretium ipsum. Praesent libero metus, sollicitudin ut dictum ut, porttitor sit amet elit. Aliquam ultricies facilisis ex, at maximus mauris ullamcorper quis. Vivamus ante est, ultrices vitae justo ac, elementum sodales ante. Aliquam eu elit non dolor molestie porttitor. Ut dapibus metus suscipit, congue massa id, sodales eros. Vestibulum id lacus malesuada, interdum sem ut, condimentum massa. Aliquam arcu enim, ornare a aliquam eu, fermentum ac est. Etiam eget erat in est malesuada bibendum. Duis sed nibh sit amet mauris posuere elementum. In hac habitasse platea dictumst.
-> hello this is a quote
+> hello this is a longer quote to test sizing and stuff yes yes isnt that cool extra words extra words extra words 
 
 ## list
 - dot
