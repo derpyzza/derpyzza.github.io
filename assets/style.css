@@ -1,5 +1,5 @@
 :root {
-  --accent: #D1795C  ;
+  --accent: #D1795C;
   --light: #f7f7f7;
   --light-gray: #e6e6e6;
   --dark: #1d1d1d;
@@ -25,6 +25,10 @@ aside {
   padding: 1rem;
   hyphens: none;
 }
+mark {
+  background: var(--light-gray);
+  color: var(--dark);
+}
 code {
   display: block;
   color: var(--light);
@@ -35,11 +39,11 @@ code {
   padding-left: 0;
   border-radius: 10px;
 }
- p > code,
- li > code,
- dd > code,
- td > code,
- strong > code {
+ code > p,
+ code > li,
+ code > dd,
+ code > dt,
+ code > strong {
    display: inline;
    overflow-x: none;
    padding: 0;
@@ -59,8 +63,10 @@ blockquote {
   background: var(--dark);
 }
 .page {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
-  /* min-height: 100vw; */
+  /* min-height: 110vw; */
 }
 .header {
   display: flex;
@@ -170,6 +176,7 @@ blockquote {
     max-width: calc(70ch + 10.5rem);
     padding-right: 10.5rem;
     margin: auto;
+    min-height: 100vh;
   }
   aside {
     color: var(--accent);
