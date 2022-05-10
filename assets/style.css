@@ -60,7 +60,7 @@ blockquote {
 }
 .page {
   padding: 1rem;
-  min-height: 100vw;
+  /* min-height: 100vw; */
 }
 .header {
   display: flex;
@@ -148,6 +148,28 @@ blockquote {
 
 .post:hover {
   background: #E8E8E8;
+}
+
+@media screen and (min-width:800px) {
+  .main {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    max-width: calc(70ch + 10.5rem);
+    padding-right: 10.5rem;
+    margin: auto;
+  }
+  aside {
+    color: var(--accent);
+    background: var(--light);
+    position: absolute;
+    right: 0;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 9rem;
+    hyphens: none;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
