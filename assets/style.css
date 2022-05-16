@@ -1,5 +1,6 @@
 :root {
   --accent: #D1795C;
+  --light-accent: #f2d5bf;
   --light: #f7f7f7;
   --light-gray: #e6e6e6;
   --dark: #1d1d1d;
@@ -32,7 +33,7 @@ mark {
 code {
   display: block;
   color: var(--light);
-  background: var(--dark);
+  background: #161616;
   overflow-x: auto;
   font-size: 1rem;
   padding: 1rem;
@@ -54,13 +55,14 @@ a {
   color: var(--accent);
   text-decoration: none;
 }
+
 blockquote {
   padding: 0.7rem;
   margin: 0.5rem;
-  border-left: 0.5rem solid rgb(191, 124, 207);;
+  border-left: 0.5rem solid var(--accent);
   text-align: left;
-  color: var(--light);
-  background: var(--dark);
+  color: var(--dark);
+  background: var(--light-accent);
 }
 .page {
   display: flex;
@@ -167,6 +169,22 @@ blockquote {
   background: #E8E8E8;
   transform: translate(0, -5px);
 }
+
+.codehilite .k  { 
+  color: #EC76A9; 
+}
+.codehilite .kd { color: #EC76A9; }
+.codehilite .kt { color: #33b1ff; }
+.codehilite .nf { color: #A876E0; }
+.codehilite .n  { color: #EC76A8; }
+.codehilite .s  { color: #3ddbd9; }
+.codehilite .sc { color: #3ddbd9; }
+.codehilite .s2 { color: #3ddbd9; }
+.codehilite .c  { color: #393939; }
+.codehilite .c1 { color: #393939; }
+.codehilite .cm { color: #393939; }
+.codehilite .p  { color: #c1c7cd; }
+.codehilite .cp { color: #42be65; }
 
 @media screen and (min-width:800px) {
   .main {

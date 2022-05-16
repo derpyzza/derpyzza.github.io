@@ -2,6 +2,8 @@ $title Writing Jenny
 $subtitle My tiny static site generator
 $date 10/05/22
 
+> Edited: 16/05/22
+
 ## Jenny
 i've been wanting to start a small blog to kinda document my projects and stuff for a while now, and a couple days ago i decided to just sit down and finally make one. going into it however, i had some requirements i needed to satisfy:
 - the site needed to be lightweight. like *really* lightweight. like fits-in-under-512-kb-so-i-can-join-the-[512kb-club][1] lightweight.
@@ -33,10 +35,8 @@ what i wanted :)
 ## How
 does it really work? ( as of the time of writing ) jenny is essentially just a small python script that expects three things: a <mark>src/</mark> directory that contains <mark>.md</mark> files, an 
 <mark>assets/</mark> directory that contains a stylesheet and two template <mark>.html</mark> files ( one for the main page, and one for the actual posts themselves ) and a <mark>public</mark> directory. the script reads through every <mark>.md</mark> file in the <mark>src/</mark> directory, and first off preprocesses the file for some metadata. metadata for jenny follows the following syntax:
-<aside> ignore the backslash there. it seems my generator still has some unforseen bugs ehe </aside>
-
 ```
-  \$command args...
+  \\ $command args...
 ```
 metadata must always begin with a dollar symbol, immediately followed by a command or keyword that tells the program what kind of data it is, followed by a space delimited string of arguements to the
 command. currently, jenny only supports three commands: title, subtitle, and data. all three of these are used in displaying the title of the post on the post page, as well as displaying the title on
