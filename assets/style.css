@@ -54,6 +54,10 @@ code {
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: transform 0.1s ease-in;
+}
+a:hover {
+  transform: translate(0, -5px);
 }
 
 blockquote {
@@ -110,9 +114,16 @@ blockquote {
 }
 
 .blogpyzza {
+  display: flex;
   color: var(--accent);
   text-align: center;
   text-rendering: optimizeLegibility;
+}
+.blogpyzza span {
+  transition: transform 0.5s ease;
+}
+.blogpyzza span:hover {
+ transform: rotateZ(180deg) translate(0, -10px);
 }
 
 .footer {
