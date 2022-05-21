@@ -30,6 +30,9 @@ mark {
   background: var(--light-gray);
   color: var(--dark);
 }
+sup {
+  color: var(--accent);
+}
 code {
   display: block;
   color: var(--light);
