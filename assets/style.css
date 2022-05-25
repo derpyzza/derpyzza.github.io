@@ -115,7 +115,11 @@ blockquote {
   text-align: center;
   text-rendering: optimizeLegibility;
 }
-
+.index {
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent);
+}
 .blogpyzza {
   display: flex;
   color: var(--accent);
@@ -207,7 +211,9 @@ blockquote {
     border-radius: 10px;
     max-width: calc(70ch + 10.5rem);
     padding-right: 10.5rem;
+    padding-left: 13.5rem;
     margin: auto;
+    margin-left: 5rem;
     min-height: 100vh;
   }
   aside {
@@ -221,6 +227,15 @@ blockquote {
     width: 9rem;
     hyphens: none;
   }
+  .index {
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    border-left: 4px solid var(--accent);
+    width: 9.8rem;
+  }
+
 }
 
 /* @media (prefers-color-scheme: dark) {
