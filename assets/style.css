@@ -210,8 +210,8 @@ blockquote {
     display: block;
     border-radius: 10px;
     max-width: calc(70ch + 10.5rem);
-    padding-right: 10.5rem;
     /*
+    padding-right: 10.5rem;
     padding-left: 13.5rem;*/
     margin: auto;
     /*margin-left: 5rem;*/
@@ -223,6 +223,7 @@ blockquote {
     border-radius: 10px;
     max-width: calc(70ch + 10.5rem);
     padding-left: 13.5rem;
+    padding-right: 12rem;
     margin: auto;
     /*margin-left: 5rem;*/
     min-height: 100vh;
