@@ -1,4 +1,4 @@
-# ~ Unnamed as of yet project
+# Unnamed as of yet project
 
 This is where i'll link things related to my unnamed as of yet project, where i aim to try and create a minimal suite of software ( and maybe even hardware like 40 years from now ) that is built to last for a decade or more.
 

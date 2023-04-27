@@ -1,6 +1,6 @@
-# ~ Using
+# Using
 
-Here's a list of things that i use.
+here's a list of things that i use.
 
 ## Hardware
 - *Laptop:* A Dell Latitude 7490 with 8GB ram and 1TB storage.
