@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --bg: #fffefa; /*background*/
+        --nm: #363636; /*normal*/
+        --li: #bdbdbd; /*light*/
+        --ac: #349744; /*accent*/
+      }
+      body {
+        height: 100vh;
+        padding: 2rem 1.5rem 1.5rem;
+        color: var(--nm);
+        text-align: left;
+        background-color: var(--bg);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header,
+      main,
+      footer {
+        padding: 6px;
+        max-width: 60ch;
+        margin: auto;
+        word-wrap: break-word;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.5rem;
+      }
+      hr {
+        color: var(--li);
+      }
+      h1 {
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+      }
+      ul {
+        padding: 0px 10px;
+      }
+      a {
+        padding: 5px;
+        color: var(--ac);
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 80chr;
+      }
+      span {
+        color: var(--li);
+        font-weight: bolder;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #161616; /*normal*/
+          --nm: #fffefa; /*background*/
+          --li: #565; /*light*/
+          --ac: #349744; /*accent*/
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="/assets/.test/styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <small>
+        <em class="nav">
+          <div>
+            <a href="/assets/.test/about.html">@derpyzza</a>
+          </div>
+
+          <div>
+            <a href="/assets/.test/index.html">home</a>
+            <span> // </span>
+            <a href="/assets/.test/wiki/wiki.html">wiki</a>
+            <span> // </span>
+            <a href="/assets/.test/blog/blog.html">blog</a>
+            <span> // </span>
+            <a href="/assets/.test/essays/essays.html">essays</a>
+            <span> // </span>
+            <a href="">rss</a>
+          </div>
+        </em>
+        <hr />
+      </small>
+    </header>
+
+    <main>
+      <br />
+      <br />
+      <br />
+      <section id="main">
+        <h1>
+          <a href="#main"> derpyzza's hypertext labyrinth </a>
+        </h1>
+        <p>
+          There's a specific type of personal webpage that's been gaining
+          traction in several niche corners of the internet, commonly referred
+          to as
+          <a href="">
+            "Digital Gardens", or "Personal Wikis", or "Hypertext Gardens"</a
+          >
+        </p>
+        <p>This is my version of such a webpage.</p>
+        <p>This is where i'll be dumping all of my:</p>
+        <ul>
+          <li>notes</li>
+          <li>knowledge</li>
+          <li>things i find interesting</li>
+          <li>deranged ideas</li>
+        </ul>
+        <p>All publically accessible for others to learn from.</p>
+        <br />
+
+        <p>
+          As for the title "hypertext labyrinth", i chose that as a way to
+          represent the fact that this will be inherently very chaotic and
+          expansive, while using links as a sort of "hallway system" to connect
+          two or more notes together. I wanted this thing to have a theme too,
+          which is another reason for going with the term "labyrinth". I like
+          the idea of visitors to this page ( That's You! ) playing the part of
+          explorers exploring an underground labyrinth, uncovering it's secrets.
+          As time passes on and this labyrinth grows, I'd like to add little
+          bits of lore to notes and perhaps even some characters, to make it
+          feel like a little rpg :)
+        </p>
+
+        <section id="notes-of-interest">
+          <br />
+          <h2>
+            <a href="#notes-of-interest"> notes of interest: </a>
+          </h2>
+
+          <ul>
+            <li><a href="">Projects </a></li>
+            <li><a href="">Stuff i use </a></li>
+            <li><a href="">Languages </a></li>
+            <li><a href="">My Reading List </a></li>
+            <li><a href="">Random bookmarks </a></li>
+          </ul>
+        </section>
+      </section>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr />
+    </main>
+
+    <footer id="footer">
+      <small>
+        <em class="nav">
+          <span>beep beep, footer</span>
+          <span>// [ ] TODO: build website</span>
+        </em>
+      </small>
+    </footer>
+  </body>
+</html>
