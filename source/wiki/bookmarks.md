@@ -1,9 +1,11 @@
-# Bookmarks
+# bookmarks
 
 This is where i dump all my web bookmarks in order to be able to access them later, and also move away from the cloud.
 
-## Blogs I like
+## blogs I like
 i dont even like some of these, but they're here because they have some neat posts that i liked.
+
+### tech blogs:
 
 ### en
 - <https://paco.me/>
@@ -25,4 +27,4 @@ i dont even like some of these, but they're here because they have some neat pos
 
 ### kr
 - <https://www.kangminsuk.com/blog/>
-- 
+
