@@ -1,7 +1,0 @@
-
-
-# Digital Gardens
-
-"Digital Gardens", or "Personal Wikis", or "Hypertext Gardens", are a specific kind of website that revolve around the idea of a personal, always evolving, always imperfect webpage, that acts as a way to store and cultivate all your knowledge. They're a middle ground between the chaos of regular notes and the rigidity of a blog with a focus on presenting content via topic rather than chronologically through time, and a way to revisit the old web, from before it was all heavily commercialized and consumption based. Back when webpages were maintained by hobbyists who put stuff out on the internet simply for the sake of it, because they enjoyed it.
-
-I wasn't around back then, but i like the idea. I've been meaning to write a lot more in order to improve my writing ability, and so i started a blog in 2022. It only lasted one blog post however, before i ran out of things to write about, as coming up with interesting things to write about is hard, and polishing them into a blog post and posting consistently is even harder. And so i've decided to start my own digital garden. It's going to serve as a self documenting system, with a bunch of random notes i'll leave for myself, designed completely for me to use for myself, but i'll make parts of it public so that it may help others.
