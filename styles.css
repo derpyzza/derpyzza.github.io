@@ -36,7 +36,6 @@ h1::after{
     animation: blink 1s steps(2, start) infinite;
 }
 h1:hover::before {
-  font-weight: bolder;
   color: var(--li);
   content: "# ";
 }
