@@ -40,12 +40,10 @@ h1:hover::before {
   content: "# ";
 }
 h2:hover::before {
-  font-weight: bolder;
   color: var(--li);
   content: "## ";
 }
 h3:hover::before {
-  font-weight: bolder;
   color: var(--li);
   content: "### ";
 }
