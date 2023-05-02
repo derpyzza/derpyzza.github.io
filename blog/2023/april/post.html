@@ -4,92 +4,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-
-	<style>
-		:root {
-			--bg: #fffefa; /*background*/
-			--nm: #363636; /*normal*/
-			--li: #bdbdbd; /*light*/
-			--ac: #349744; /*accent*/
-		}
-		body {
-        	height: 100vh;
-			padding: 2rem 1.5rem 1.5rem;
-			color: var(--nm);
-			text-align: left;
-			background-color: var(--bg);
-			font-family: Arial, Helvetica, sans-serif;
-		}
-		header, main, footer {
-			padding: 6px;
-			max-width: 60ch;
-			margin: auto;
-			word-wrap: break-word;
-		}
-		p {
-			text-align: justify;
-			line-height: 1.5rem;
-		}
-		hr {
-			color: var(--li);
-		}
-		h1 {
-			margin-top: 1rem;
-			margin-bottom: 5rem;
-		}
-		a {
-			padding: 5px;
-			color: var(--ac);
-			text-decoration: none;
-			font-weight: bold;
-			border-radius: 4px;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		img {
-			width: 100%;
-  			height: auto;
-			max-width: 80chr;
-		}
-		span {
-			color: var(--li);
-			font-weight: bolder;
-		}
-		@media (prefers-color-scheme: dark) {
-    	:root{
-        --bg: #161616; /*normal*/
-        --nm: #fffefa; /*background*/
-        --li: #565; /*light*/
-        --ac: #349744; /*accent*/
-    	}
-		}
-	</style>
+	<link rel="stylesheet" href="/main.css">
 	<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 	<header>
-		<small>
-			<em class="nav">
+		<nav>
 				<div>
-				<a href="/index.html">~</a>
-				<span> / </span>
-				<a href="/blog/blog.html">blog</a>
-				<span> / </span>
-				<a href="/blog/2023/index.html">2023</a>
-				<span> / </span>
-				<a href="/blog/2023/april/index.html">april</a>
-				<span> / </span>
-				<span> post.html </span>
+				<a href="/about.html">@derpyzza</a>
 				</div>
 
-				<span>21-04-23</span>
-			</em>
+				<div>
+				<a href="/index.html">home</a>
+				<span> // </span>
+				<a href="/wiki/wiki.html">wiki</a>
+				<span> // </span>
+				<a href="/blog/blog.html">blog</a>
+				<span> // </span>
+				<a href="/essays/essays.html">essays</a>
+				<span> // </span>
+				<a href="">rss</a>
+				</div>
+		</nav>		
 		<hr>
-		<div class="foot">
+		<div class="jump">
 			<a href="#footer">jump to bottom</a>
 		</div>
-		</small>
 	</header>
 
 	<main>
@@ -105,9 +45,7 @@
 		</h1>
 
 		<p>this is <strong>BOLD</strong>, this is <em>EMPHASISED</em>, and this is <s>CANCELED</s></p>
-		<p>There's a specific type of personal webpage that's been gaining traction in several niche corners of the internet, commonly referred to as <a href=""> [DEAD] "Digital Gardens", or "Personal Wikis", or "Hypertext Gardens"</a></p>
-		<p>This is my version of such a webpage.</p>
-		<p>This is where i'll be dumping all of my:</p>
+		<p>this is an example post</p>
 		<ul>
 		 	<li> notes </li>
 			<li> random essays and articles </li>
@@ -134,6 +72,36 @@
 			<li><a href="">[DEAD] My Reading List	</a> </li>
 			<li><a href="">[DEAD] Random bookmarks	</a> </li>
 		</ul>
+		</section>
+
+		<section id="codeblock-test">
+			<br>
+			<h2>
+				<a href="#codeblock-test">
+					codeblocks testing 
+				</a>
+			</h2>
+
+			<div class="code">
+				<div class="space">
+					<span>main.c</span> 
+					<span>- o x</span>
+				</div>
+				<hr>
+				<pre>
+					<code>
+// example code
+#include < stdio.h >
+
+int
+main ( void )
+{
+	printf("Hello world\n");
+	return 0;
+}
+					</code>
+				</pre>
+			</div>
 		</section>
 
 		<section id="heading-test">
@@ -208,34 +176,28 @@
 		<br>
 		<br>
 
-		<small class="foot">
-			<em>
+		<div class="jump">
 				<a href="#main">back to top</a>
-			</em>
-		</small>
+		</div>
 		<hr>
 	</main>
 
 	<footer id="footer">
-		<small>
-			<em class="nav">
+		<nav>
 				<div>
-				<a href="/about.html">@derpyzza</a>
+				<a href="/index.html">~</a>
+				<span> / </span>
+				<a href="/blog/blog.html">blog</a>
+				<span> / </span>
+				<a href="/blog/2023/index.html">2023</a>
+				<span> / </span>
+				<a href="/blog/2023/april/index.html">april</a>
+				<span> / </span>
+				<span> post.html </span>
 				</div>
 
-				<div>
-				<a href="/index.html">home</a>
-				<span> // </span>
-				<a href="/wiki/wiki.html">wiki</a>
-				<span> // </span>
-				<a href="/blog/blog.html">blog</a>
-				<span> // </span>
-				<a href="/essays/essays.html">essays</a>
-				<span> // </span>
-				<a href="">rss</a>
-				</div>
-			</em>
-		</small>
+				<span>21-04-23</span>
+		</nav>
 		<br>
 	</footer>
 </body>

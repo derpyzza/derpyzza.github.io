@@ -1,3 +1,9 @@
+/*
+ *
+ *  Special css file. to be included optionally for the opt-in site.
+ *
+ */
+
 :root {
   --bg: #fffefa; /*background*/
   --nm: #363636; /*normal*/
@@ -35,17 +41,9 @@ h1::after{
     color: var(--ac);
     animation: blink 1s steps(2, start) infinite;
 }
-h1:hover::before {
+h2::before,h3::before {
   color: var(--li);
   content: "# ";
-}
-h2:hover::before {
-  color: var(--li);
-  content: "## ";
-}
-h3:hover::before {
-  color: var(--li);
-  content: "### ";
 }
 ul {
   list-style: inside none;
@@ -76,15 +74,29 @@ span {
   color: var(--li);
   font-weight: bolder;
 }
-.foot {
+
+.space {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: italic;
+        font-size: smaller;
+}
+
+.code {
+			margin: 20px auto;
+			padding: 15px;
+			border: 1px solid var(--li);
+			border-radius: 10px;
+			color: var(--ac);
+}
+
+.jump {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-style: italic;
+  font-size: smaller;
 }
 
 @keyframes blink {
