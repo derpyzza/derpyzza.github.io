@@ -3,51 +3,26 @@
  *  Main css file. to be embedded into every page directly.
  *
  */
-
 :root {
-  --bg: #fffefa; /*background*/
-  --nm: #363636; /*normal*/
-  --li: #bdbdbd; /*light*/
-  --ac: #349744; /*accent*/
-
-  --wi: 60ch;
+    --bg: #fffefa;/*background*/
+    --nm: #363636;/*normal*/
+    --li: #bdbdbd;/*light*/
+    --ac: #474679;/*accent*/
+    --wi: 60ch;     /*max width*/
 }
 body {
   height: 100vh;
   padding: 2rem 1.5rem 1.5rem;
   color: var(--nm);
-  text-align: left;
   background-color: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
 }
 header,
 main,
 footer {
-  padding: 6px;
   max-width: var(--wi);
   margin: auto;
   word-wrap: break-word;
-}
-p {
-  text-align: justify;
-  line-height: 1.5rem;
-}
-hr {
-  color: var(--li);
-}
-h1 {
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-}
-a {
-  padding: 5px;
-  color: var(--ac);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-}
-a:hover {
-  text-decoration: underline;
 }
 nav {
   display: flex;
@@ -56,21 +31,55 @@ nav {
   font-style: italic;
   font-size: smaller;
 }
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+a {
+    padding: 5px;
+    color: var(--ac);
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
 img {
-  width: 100%;
-  height: auto;
-  max-width: var(--wi);
-  border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-width: var(--wi);
+    border-radius: 10px;
 }
 span {
   color: var(--li);
   font-weight: bolder;
 }
+hr {
+  color: var(--li);
+}
+.space {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: italic;
+        font-size: smaller;
+}
+.jump {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-style: italic;
+  font-size: smaller;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161616; /*normal*/
-    --nm: #fffefa; /*background*/
-    --li: #565; /*light*/
-    --ac: #349744; /*accent*/
-  }
+    :root {
+        --bg: #161616; /*normal*/
+        --nm: #fffefa; /*background*/
+        --li: #5c5c5c; /*light*/
+        --ac: #f1b138; /*accent*/
+    }
 }
