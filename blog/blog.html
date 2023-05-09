@@ -5,81 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      :root {
-        --bg: #fffefa; /*background*/
-        --nm: #363636; /*normal*/
-        --li: #bdbdbd; /*light*/
-        --ac: #349744; /*accent*/
-      }
-      body {
-        height: 100vh;
-        padding: 2rem 1.5rem 1.5rem;
-        color: var(--nm);
-        text-align: left;
-        background-color: var(--bg);
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      header,
-      main,
-      footer {
-        padding: 6px;
-        max-width: 60ch;
-        margin: auto;
-        word-wrap: break-word;
-      }
-      p {
-        text-align: justify;
-        line-height: 1.5rem;
-      }
-      hr {
-        color: var(--li);
-      }
-      h1 {
-        margin-top: 1rem;
-        margin-bottom: 5rem;
-      }
-      ul {
-        padding: 0px 10px;
-      }
-      a {
-        padding: 5px;
-        color: var(--ac);
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 4px;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 80chr;
-      }
-      span {
-        color: var(--li);
-        font-weight: bolder;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #161616; /*normal*/
-          --nm: #fffefa; /*background*/
-          --li: #565; /*light*/
-          --ac: #349744; /*accent*/
-        }
-      }
-    </style>
-
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
 
     <header id="header">
-      <small>
-        <em class="nav">
+      <nav>
 				<div>
 				<a href="/about.html">@derpyzza</a>
-				</div>
-
-				<div>
+				<span> // </span>
 				<a href="/index.html">home</a>
 				<span> // </span>
 				<a href="/wiki/wiki.html">wiki</a>
@@ -90,22 +24,16 @@
 				<span> // </span>
 				<a href="">rss</a>
 				</div>
-        </em>
-        <hr>
-        <div class="foot">
-          <a href="#footer">jump to bottom</a>
-        </div>
-      </small>
+      </nav>
     </header>
 
     <main>
       <section id="main">
-        <br />
-        <br />
-        <br />
-        <h1>
-          <a href="#main"> a blog, of sorts </a>
-        </h1>
+        <hgroup>
+          <h1>
+            <a href="#main"> a blog, of sorts </a>
+          </h1>
+        </hgroup>
 
         <p>
           This is where you can find all of my random ramblings, vague notes, and deranged thoughts, arranged by reverse-chronological order for your viewing pleasure. 
@@ -114,14 +42,13 @@
       </section>
 
       <section id="favs">
-        <br />
         <h2>
           <a href="#favs"> favourites </a>
         </h2>
         <p>some of my favourite notes</p>
         <ul>
           <li>
-            <a href="/blog/2023/april/post.html#main"> post one </a>
+            <a href="/blog/2023/april/post.html#main"> post one</a>
             <span>21-04-23</span>
           </li>
           <li>post one</li>
@@ -132,7 +59,6 @@
 
       <section id="list">
         <section id="23-april">
-          <br />
           <h2>
             <a href="#23-april">april</a>
             <span>2022</span>
@@ -148,7 +74,6 @@
           </ul>
         </section>
         <section id="23-may">
-          <br />
           <h2>
             <a href="#23-may">may</a>
           </h2>
@@ -162,7 +87,6 @@
           </ul>
         </section>
         <section id="23-june">
-          <br />
           <h2>
             <a href="#23-june">june</a>
           </h2>
@@ -174,7 +98,6 @@
           </ul>
         </section>
         <section id="23-july">
-          <br />
           <h2>
             <a href="#23-july">july</a>
           </h2>
@@ -202,28 +125,17 @@
         </section>
       </section>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <small class="foot">
-        <em>
-          <a href="">back to top</a>
-        </em>
-      </small>
-
+      <div class="jump">
+        <a href="#main">back to top</a>
+      </div>
       <hr />
 
       <footer id="footer">
-        <small>
-          <em class="nav">
+        <nav>
             <a href=""> <-- ??? > </a>
             <a href="">< see all ></a>
             <a href=""> < 2022 --> </a>
-          </em>
-        </small>
+        </nav>
       </footer>
     </main>
   </body>

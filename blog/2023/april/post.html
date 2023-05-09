@@ -8,20 +8,13 @@
 	<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<<<<<<< HEAD
 	<div id="container">
-=======
->>>>>>> parent of db283cd (cleanup cleanup management etc)
 	<header>
 		<nav>
 				<div>
 				<a href="/about.html">@derpyzza</a>
-				</div>
-
-				<div>
-				<a href="/index.html">home</a>
 				<span> // </span>
-				<a href="/wiki/wiki.html">wiki</a>
+				<a href="/index.html">home</a>
 				<span> // </span>
 				<a href="/blog/blog.html">blog</a>
 				<span> // </span>
@@ -30,23 +23,19 @@
 				<a href="">rss</a>
 				</div>
 		</nav>		
-		<hr>
-		<div class="jump">
-			<a href="#footer">jump to bottom</a>
-		</div>
 	</header>
 
 	<main>
 		<section id="main">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<h1>
-			<a href="#main">derpyzza's hypertext labyrinth</a>
-		</h1>
+
+		<hgroup>
+			<h1>
+				<a href="#main">derpyzza's hypertext labyrinth</a>
+			</h1>
+			<span>
+				22-04-23
+			</span>
+		</hgroup>
 
 		<p>this is <strong>BOLD</strong>, this is <em>EMPHASISED</em>, and this is <s>CANCELED</s></p>
 		<p>this is an example post</p>
@@ -57,12 +46,10 @@
 			<li>  things i find interesting </li>
 		</ul>
 		<p> All publically accessible for others to learn from. </p>
-		<br>
 
 		<p>As for the title "hypertext labyrinth", i chose that as a way to represent the fact that this will be inherently very chaotic and expansive, while using links as a sort of "hallway system" to connect two or more notes together. I wanted this thing to have a theme too, which is another reason for going with the term "labyrinth". I like the idea of visitors to this page ( That's You! ) playing the part of explorers exploring an underground labyrinth, uncovering it's secrets. As time passes on and this labyrinth grows, I'd like to add little bits of lore to notes and perhaps even some characters, to make it feel like a little rpg :) </p>
 
 		<section id="notes-of-interest">
-		<br>
 		<h2> 
 			<a href="#notes-of-interest">
 			notes of interest: 
@@ -86,30 +73,38 @@
 				</a>
 			</h2>
 
-			<div class="code">
-				<div class="space">
-					<span>main.c</span> 
-					<span>- o x</span>
-				</div>
-				<hr>
 				<pre>
 					<code>
-// example code
-#include < stdio.h >
-
-int
-main ( void )
-{
-	printf("Hello world\n");
-	return 0;
+body {
+	height: 100vh;
+	padding: 2rem 1.5rem 1.5rem;
+	color: var(--nm);
+	background-color: var(--bg);
+	font-family: Arial, Helvetica, sans-serif;
+}
+header,
+main,
+footer {
+	max-width: var(--wi);
+	margin: auto;
+	word-wrap: break-word;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-style: italic;
+	font-size: smaller;
+}
+h1 {
+	margin-top: 1rem;
+	margin-bottom: 5rem;
 }
 					</code>
 				</pre>
-			</div>
 		</section>
 
 		<section id="heading-test">
-		<br>
 			<h2>
 				<a href="#heading-test">
 					this is a heading
@@ -121,7 +116,6 @@ main ( void )
 				<li>point 1</li>
 				<li>point 2</li>
 			</ul>
-			<br>
 
 			<h3>this is to emphasise point 0</h3>
 			<p>
@@ -140,7 +134,6 @@ main ( void )
 		</section>
 
 		<section id="img-test">
-		<br>
 			<h2>
 				<a href="#img-test">img test</a>
 			</h2>
@@ -150,7 +143,6 @@ main ( void )
 		</section>
 
 		<section id="ar-test">
-		<br>
 		<h2>
 			<a href="#ar-test">
 				arabic test
@@ -162,7 +154,6 @@ main ( void )
 		</section>
 
 		<section id="jp-test">
-		<br>
 		<h2>
 			<a href="#jp-test">
 				japanese test
@@ -173,12 +164,6 @@ main ( void )
 			正コカヘオ聞討タケナエ号投ツムモ趣化レどしゅ求5板しひ朝担ふリ産朝題児こゃリ際内ノルセ界婚マネオラ撃岩るま明成ら物録州ぶみぞ家業ほか続力でト命誰兄トらゃご。
 		</p>
 		</section>
-
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 
 		<div class="jump">
 				<a href="#main">back to top</a>
@@ -199,8 +184,6 @@ main ( void )
 				<span> / </span>
 				<span> post.html </span>
 				</div>
-
-				<span>21-04-23</span>
 		</nav>
 		<br>
 	</footer>
