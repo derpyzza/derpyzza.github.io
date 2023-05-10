@@ -45,7 +45,6 @@ h2 {
   margin-bottom: 2rem;
 }
 p {
-    text-align: justify;
     line-height: 1.5rem;
 }
 a {
@@ -71,6 +70,9 @@ span {
   color: var(--li);
   font-weight: bolder;
 }
+li {
+  margin: 10px;
+}
 hr {
   color: var(--li);
   border-style: dashed;
@@ -90,6 +92,17 @@ pre {
   justify-content: flex-end;
   align-items: center;
   font-size: small;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border-bottom: 1px solid var(--li); */
+  border-left: 2px solid var(--li);
+  border-left: 4px solid var(--ac);
+  padding: 10px;
+  margin: 15px;
 }
 
 h1::before,
