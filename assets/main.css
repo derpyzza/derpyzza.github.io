@@ -115,17 +115,25 @@ pre {
   padding-bottom: 8rem;
 }
 
+#list:hover .post:hover {
+  opacity: 1;
+  border-left: 4px solid var(--ac);
+}
+
+#list:hover > .post {
+  opacity: .3;
+  border-left: 4px solid var(--li);
+}
+
 .post {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* border-bottom: 1px solid var(--li); */
-  border-left: 2px solid var(--li);
   border-left: 4px solid var(--ac);
-  padding: 10px;
-  margin: 15px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-top: 15px;
+  transition: opacity .3s ease;
 }
 
 h1::before,
