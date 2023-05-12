@@ -48,8 +48,4 @@ So perhaps i did not in fact need a super high powered ultra mega minimal exciti
 
 [3] But but my customization!! my minimalism!! noooooooooooo
 
-<p style="text-align: center; color: var(--li)"> * * * </p>
-
 <span>*i still am going to make my ultra minimal mega static site generator sometime soon tho. err maybe.* </span>
-
-<p style="text-align: center; color: var(--li)"> * * * </p>

@@ -30,6 +30,11 @@ hgroup {
   padding-top: 6rem;
   margin-bottom: 5rem;
 }
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -73,6 +78,9 @@ span {
   color: var(--li);
   font-weight: bolder;
 }
+p span::before, p span::after {
+  content: " //"
+}
 li {
   margin: 10px;
 }
@@ -80,6 +88,17 @@ hr {
   color: var(--li);
   border-style: dashed;
 }
+
+main hr {
+  border: none;
+}
+
+main hr::before {
+  content: '* * *';
+  display: block;
+  text-align: center;
+}
+
 pre {
   margin: 0;
 	margin: 20px auto;
@@ -90,11 +109,10 @@ pre {
   border-radius: 10px;
 	color: var(--ac);
 }
-.jump {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: small;
+
+#posts {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
 }
 
 .post {
@@ -106,6 +124,8 @@ pre {
   border-left: 4px solid var(--ac);
   padding: 10px;
   margin: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1::before,
