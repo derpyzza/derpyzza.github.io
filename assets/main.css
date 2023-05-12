@@ -8,15 +8,15 @@
     --nm: #363636;/*normal*/
     --li: #bdbdbd;/*light*/
     --ac: #2e86d8;/*accent*/
-    --wi: 70ch;     /*max width*/
+    --wi: 60ch;     /*max width*/
 }
 
 body {
-  padding: 4rem 1.5rem 1.5rem;
+  padding: 4rem 1rem 1rem;
   color: var(--nm);
   background-color: var(--bg);
   font-family: monospace;
-  font-size: 16px;
+  font-size: 18px;
 }
 header,
 main,
@@ -49,6 +49,9 @@ p {
 }
 a {
     color: var(--ac);
+}
+em, a {
+  font-weight: medium;
 }
 a:hover {
     text-decoration: underline;
