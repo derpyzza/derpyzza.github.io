@@ -25,16 +25,27 @@
     <main>
       <section id="main">
         <hgroup>
+					<span> {{date}} </span>
           <h1>
-            <a href="#main">about && contact</a>
+						<a href="#main">{{title}}</a>
           </h1>
+					<h4>
+						<span> {{subtitle}} </span>
+					</h4>
         </hgroup>
 
-        <p>i am me. contact me via email <a href="mailto:derpyzza@gmail.com">derpyzza@gmail.com</a></p>
+				{{content}}
 
-        <p>ty.</p>
       </section>
 
+      <hr />
     </main>
+
+    <footer id="footer">
+      <nav>
+        <span>beep beep, footer</span>
+        <span>// [ ] TODO: build website</span>
+      </nav>
+    </footer>
   </body>
 </html>

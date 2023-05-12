@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Derpyzza's site</title>
-    <link rel="stylesheet" href="/assets/main.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
   </head>
 
   <body>
@@ -24,17 +24,40 @@
 
     <main>
       <section id="main">
-        <hgroup>
-          <h1>
-            <a href="#main">about && contact</a>
-          </h1>
-        </hgroup>
-
-        <p>i am me. contact me via email <a href="mailto:derpyzza@gmail.com">derpyzza@gmail.com</a></p>
-
-        <p>ty.</p>
+				<hgroup>
+					<span>{{date}}</span>
+					<h1>
+						<a href="#main">
+							{{title}}
+						</a>
+					</h1>
+					<h4>
+						<span>
+							{{subtitle}}
+						</span>
+					</h4>
+				</hgroup>
+				{{latest}}
       </section>
 
+      <hr />
+
+      <section id="posts">
+        <h2><span>Archive</span></h2>
+
+        <section id="list">
+					{{posts}}
+				</section>
+      </section>
+
+      <hr />
     </main>
+
+    <footer id="footer">
+      <nav>
+        <span>beep beep, footer</span>
+        <span>// [ ] TODO: build website</span>
+      </nav>
+    </footer>
   </body>
 </html>
