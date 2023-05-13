@@ -40,7 +40,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   font-style: italic;
-  padding:10px;
+  padding: 10px;
+  padding-left: 0px;
 }
 h1 {
   margin-top: 1rem;
