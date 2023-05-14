@@ -121,17 +121,21 @@ pre {
   border-left: 4px solid var(--ac);
 }
 
-#list:hover > .post {
+#list:hover .post {
   opacity: .3;
-  border-left: 4px solid var(--li);
+  border-left: 4px solid var(--bg);
 }
+/* 
+#list > div > span::before {
+  content: ":: ";
+} */
+
 
 .post {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border-bottom: 1px solid var(--li); */
-  border-left: 4px solid var(--ac);
+  border-left: 4px solid var(--li);
   padding: 20px;
   margin-top: 15px;
   transition: opacity .3s ease;
