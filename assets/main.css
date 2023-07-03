@@ -118,7 +118,7 @@ pre {
 
 #list:hover .post:hover {
   opacity: 1;
-  border-left: 4px solid var(--ac);
+  border-left: 24px solid var(--ac);
 }
 
 #list:hover .post {
@@ -139,6 +139,7 @@ pre {
   padding: 20px;
   margin-top: 15px;
   transition: opacity .3s ease;
+  transition: border-left .4s ease;
 }
 
 h1::before,
