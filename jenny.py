@@ -35,7 +35,7 @@ def preprocess_file(file):
         elif stripped.startswith('# '):
             title = stripped.rstrip('\n').lstrip('# ').lstrip(' ')
             title_id = title.replace(" ", "-").lower()
-        elif stripped.startswith('##'):
+        elif stripped.startswith('## '):
             data = stripped.rstrip('\n').lstrip('##').lstrip(' ')
             id = data.replace(" ", "-").lower()
             content += "<h2 id=\"" + id + "\"> <a href=\"#" + id + "\">" + data + "</a></h2>"

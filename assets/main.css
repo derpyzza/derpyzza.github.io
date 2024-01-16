@@ -130,9 +130,6 @@ pre {
 	color: var(--ac);
 }
 
-#posts {
-}
-
 #list:hover .list-item:hover {
   opacity: 1;
   border-left: 24px solid var(--ac);
