@@ -6,17 +6,17 @@
 :root {
     --bg: #efefef;/*background*/
     --nm: #1e1e1e;/*normal*/
-    --li: #808080;/*light*/
-    --ac: #ff5415;/*accent*/
+    --li: #b5b5b5;/*light*/
+    --ac: #ff6161;/*accent*/
     --wi: 60ch;     /*max width*/
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #161616; /*normal*/
-        --nm: #fffefa; /*background*/
+        --nm: #f2f2f2; /*background*/
         --li: #545454; /*light*/
-        --ac: #f27e3a;/*accent*/
+        --ac: #ff6161;/*accent*/
     }
 }
 
@@ -25,7 +25,7 @@ body {
   color: var(--nm);
   background-color: var(--bg);
   font-family: monospace;
-  font-size: 18px;
+  font-size: 20px;
 }
 header,
 main,
@@ -37,6 +37,7 @@ footer {
 
 main {
   padding-bottom: 8rem;
+  padding-top: 4rem;
 }
 
 hgroup {
