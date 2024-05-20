@@ -4,19 +4,19 @@
  *
  */
 :root {
-    --bg: #f2f2f2;/*background*/
-    --nm: #1e1e1e;/*normal*/
-    --li: #9f9f9f;/*light*/
-    --ac: #ff3434;/*accent*/
-    --wi: 80ch;     /*max width*/
+    --bg: #f2f2f2;  /*background*/
+    --nm: #1e1e1e;  /*normal*/
+    --li: #9f9f9f;  /*light*/
+    --ac: #ff3434;  /*accent*/
+    --wi: 80ch;       /*max width*/
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #161616; /*normal*/
-        --nm: #f2f2f2; /*background*/
-        --li: #545454; /*light*/
-        --ac: #ff6161;/*accent*/
+        --bg: #161616;  /*normal*/
+        --nm: #f2f2f2;  /*background*/
+        --li: #545454;  /*light*/
+        --ac: #ff6161;  /*accent*/
     }
 }
 
