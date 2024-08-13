@@ -1,5 +1,6 @@
-@date 13-05-23
-# Writing systems evolved from material limitations.
+@post_title Writing systems evolved from material limitations
+@post_date 2023.05.13
+---
 
 A cool thing i learned recently is that various different writing systems and scripts are the way they are due to the physical & material properties of writing materials that were available to the people of the time.
 

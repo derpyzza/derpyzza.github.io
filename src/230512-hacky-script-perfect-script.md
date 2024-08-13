@@ -1,6 +1,7 @@
-@date 12-05-23
-# Hacky script, perfect script
-@subtitle a tale of one of those rare moments where i broke through the endless cycle of procrastination.
+@post_title Hacky script, Perfect script
+@post_date 2023.05.12
+@post_subtitle a tale of one of those rare moments where i broke through the endless cycle of procrastination.
+---
 
 Back in 2022 i decided to start a tiny little personal blog. i designed a lightweight website, and spun up a 
 quick little python script that acted as a static site generator [1] where i wrote my blogposts in markdown in a source folder somewhere, and my script then translated them into html files with the help of predefined templates. that blog only lasted one blogpost before i abandoned it / forgot about it.

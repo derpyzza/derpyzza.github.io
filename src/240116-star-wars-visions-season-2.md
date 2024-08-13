@@ -1,5 +1,6 @@
-@date 16-01-24
-# Star Wars: Visions volume II
+@post_title Star Wars: Visions volume II
+@post_date 2024.01.16
+---
 
 I recently found out that disney released the second season for their Star Wars: Visions anthology series about 8 months ago ( On the may of 2023 ). Im not sure how this one slipped under my radar, considering how much i enjoyed the first season, but it did until a couple days ago when i noticed it while searching for something to watch while eating. I sat down and binged it over the weekend, and it was pretty good! Maybe not as good as the first season overall, but the high points were better than the first season's high points ( ...from what i can remember of the first season. I watched it only once, and that too about 2 years ago, so my memory may be a *little* fuzzy ). The individual episodes ended up falling pretty neatly into three categories,["Episodes I loved"](#episodes-i-loved), ["Episodes that were okay"](#episodes-that-were-okay) and ["Episodes that were pretty meh"](#episodes-that-were-pretty-meh). I rated the shorts based on my enjoyment of them as a standalone short, as well as how well they fit in as "Star Wars" media.
 

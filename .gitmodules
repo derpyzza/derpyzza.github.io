@@ -1,0 +1,3 @@
+[submodule "jenny"]
+	path = jenny
+	url = https://github.com/derpyzza/jenny

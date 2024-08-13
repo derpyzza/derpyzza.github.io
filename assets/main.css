@@ -4,20 +4,29 @@
  *
  */
 :root {
-    --bg: #f2f2f2;  /*background*/
-    --nm: #1e1e1e;  /*normal*/
-    --li: #9f9f9f;  /*light*/
-    --ac: #ff3434;  /*accent*/
-    --wi: 80ch;       /*max width*/
+
+    --bg: #161616;  /*normal*/
+    --nm: #fff;     /*background*/
+    --li: #8f8e8e;  /*light*/
+    --dc: #4c4c4c;  /*decor colour*/
+    --ac: #f66f57;  /*accent*/
+    --a2: #f9a293;  /*accent 2*/
+    --vi: #aa6f66;  /*visited ( for links ) */
+
+    --wi: 80ch       /*max width*/
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
-        --bg: #161616;  /*normal*/
-        --nm: #f2f2f2;  /*background*/
-        --li: #545454;  /*light*/
-        --ac: #ff6161;  /*accent*/
+        --bg: #fff9f3;  /*background*/
+        --nm: #4f4848;  /*normal*/
+        --li: #9f9f9f;  /*light*/
     }
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -25,11 +34,13 @@ body {
   color: var(--nm);
   background-color: var(--bg);
   font-family: monospace;
-  font-size: 1rem;
 }
+
 header,
 main,
-footer {
+footer,
+section
+{
   max-width: var(--wi);
   margin: auto;
   word-wrap: break-word;
@@ -46,90 +57,93 @@ hgroup {
 }
 
 footer {
-  padding-top: 1rem;
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
+
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  font-style: italic;
   padding: 10px;
   padding-left: 0px;
 }
+
+footer nav {
+  justify-content: center;
+}
+
 h1 {
   margin-top: 1rem;
+  margin-bottom: .7rem;
 }
 h2 {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-
-h1, h2 {
-  /* background-color: var(--ac); */
-  /* color: var(--bg); */
-  /* width: fit-content; */
-  /* padding: 0px 10px; */
-}
-
-h1::before,
-h2::before
-{
+h4 {
   color: var(--li);
-  content: "# ";
 }
+hgroup h4::before {
+  color: var(--li);
+  content: "// ";
+}
+
 p {
-    line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
+
+/* === LINKS === */
+
 a {
-    color: var(--ac);
-}
-a:hover {
-  text-decoration: none;
-  background-color: var(--ac);
-  color: var(--bg);
-}
-.list-item a:hover,
-h1 a:hover,
-h2 a:hover {
-  background-color: var(--bg); 
   color: var(--ac);
+  text-decoration: underline;
+}
+a:hover, a:visited:hover {
+  color: var(--a2);
+  text-decoration: none;
+}
+/* a:visited {
+  color: var(--vi);
+} */
+sup a {
+  text-decoration: none;
 }
 em, a {
   font-weight: medium;
-}
-h1 > a {
-  text-decoration: none;
 }
 nav > a {
   font-weight: bold;
   padding: 5px;
 }
+
+/* === LINKS === */
+
+span {
+  color: var(--dc);
+  font-weight: bolder;
+}
+
 img {
     width: 100%;
     height: auto;
     max-width: var(--wi);
     border-radius: 10px;
 }
-span {
+
+time, main span, aside {
   color: var(--li);
   font-weight: bolder;
 }
-p span::before, p span::after {
-  content: " //"
-}
+
 li {
   margin: 10px;
-  color: var(--li);
-  list-style-type: " * ";
 }
 
-/* li::before {
-  content: "*";
-} */
 hr {
-  color: var(--li);
-  border-style: dashed;
+  color: var(--dc);
 }
 
 main hr {
@@ -142,47 +156,18 @@ main hr::before {
   text-align: center;
 }
 
-pre {
-  margin: 0;
-	margin: 20px auto;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  padding: 10px;
-  border: 1px solid var(--li);
-  border-radius: 10px;
-	color: var(--ac);
+mark {
+  background-color: var(--bg);
+  color: var(--vi);
 }
 
-#list:hover .list-item:hover {
-  opacity: 1;
-  border-left: 24px solid var(--ac);
+.note {
+  padding: 18px;
+  border: 2px solid var(--ac);
+  border-radius: 4px;
+  background-color:#231b19;
 }
 
-#list:hover .list-item {
-  opacity: .3;
-  border-left: 4px solid var(--bg);
-}
-
-/* #list > div > a::before {
-  content: ":: ";
-} */
-
-#list > div > span::before {
-  content: "// ";
-}
-
-
-.list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-left: 4px solid var(--li);
-  padding: 20px;
-  /* margin-top: 15px; */
-  transition: opacity .3s ease;
-  transition: border-left .4s ease;
-}
-
-.list-item a {
-  text-decoration: none;
+.note h3 {
+  color: var(--ac);
 }
