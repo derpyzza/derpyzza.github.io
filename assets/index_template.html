@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derpyzza's site</title>
-    <link rel="stylesheet" href="/assets/main.css" />
-  </head>
 
-  <body>
-    <header id="header">
-      <span>// derpyzza's notes </span>
-      <nav>
-        <div>
-          <a href="/index.html">home</a>
-          <span>/</span>
-          <a href="/archive.html">archive</a>
-          <span>/</span>
-          <a href="https://github.com/derpyzza">github</a>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derpyzza's site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css" />
+</head>
 
-    <main>
-      <section id="main">
-        <hgroup>
-          <h1>{{title}}</h1>
-        </hgroup>
+<body>
+  <header id="header">
+      <a href="/">
+        // Derpyzza's notes :D
+      </a>
+      <div>
+        <a href="/index.html">home</a>
+        <span>/</span>
+        <a href="/archive.html">archive</a>
+        <span>/</span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+  </header>
 
-        {{content}}
-        <br>
-        <ul>
-          {{posts}}
-        </ul>
-      </section>
-    </main>
+  <main>
+    <section id="main">
+      <hgroup>
+        <h1>{{title}}</h1>
+      </hgroup>
 
-    <footer id="footer">
-      <hr />
-      <nav>
-        <span
-          >generated with
-          <a href="https://github.com/derpyzza/jenny"> jenny </a>
-        </span>
-      </nav>
-    </footer>
-  </body>
+      {{content}}
+      <br>
+      <ul>
+        {{posts}}
+      </ul>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <nav>
+      <span>
+        Derpyzza — 2024
+      </span>
+      <span>generated with
+        <a href="https://github.com/derpyzza/jenny"> jenny </a>
+      </span>
+      <a href=" ">back to top</a>
+    </nav>
+  </footer>
+</body>
+
 </html>

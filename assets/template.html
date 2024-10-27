@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derpyzza's site</title>
-    <link rel="stylesheet" href="/assets/main.css" />
-  </head>
 
-  <body>
-    <header id="header">
-      <a href="/public/archive.html">..</a>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derpyzza's site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css" />
+</head>
 
-    <main>
-      <section id="main">
-        <hgroup>
-					<span> {{date}} </span>
-          <h1>
-						<a href="#main">{{title}}</a>
-          </h1>
-          {{subtitle}}
-        </hgroup>
+<body> 
+  <header id="header">
+      <a href="/">
+        // Derpyzza's notes :D
+      </a>
+      <div>
+        <a href="/index.html">home</a>
+        <span>/</span>
+        <a href="/archive.html">archive</a>
+        <span>/</span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+  </header>
 
-				{{content}}
-
-      </section>
-
-    </main>
-
-    <footer id="footer">
-      <hr />
-       <nav>
-        <div>
-          <a href="/index.html">home</a>
-          <span>/</span>
-          <a href="/archive.html">archive</a>
-          <span>/</span>
-          <a href="https://github.com/derpyzza">github</a>
+  <main>
+    <section id="main">
+      <hgroup>
+        <div class="datebar">
+          <span> 26th October, 2024 </span>
+          <a href="/public/archive.html">Go back</a>
         </div>
-      </nav>
-    </footer>
-  </body>
+        <h1>{{title}}</h1>
+        <h4>{{subtitle}}</h4>
+      </hgroup>
+
+      {{content}}
+
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <hr />
+    <nav>
+      <span>
+        Derpyzza — 2024
+      </span>
+      <div>
+        <a href="/index.html">home</a>
+        <span> / </span>
+        <a href="/archive.html">archive</a>
+        <span> / </span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+      <a href=" ">back to top</a>
+    </nav>
+  </footer>
+</body>
+
 </html>

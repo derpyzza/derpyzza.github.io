@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derpyzza's site</title>
-    <link rel="stylesheet" href="/assets/main.css" />
-  </head>
 
-  <body>
-    <header id="header">
-      <a href="/public/archive.html">..</a>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derpyzza's site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css" />
+</head>
 
-    <main>
-      <section id="main">
-        <hgroup>
-					<span> 2022.05.10 </span>
-          <h1>
-						<a href="#main">Writing Jenny</a>
-          </h1>
-          <h4><span>My tiny static site generator</span></h4>
-        </hgroup>
+<body> 
+  <header id="header">
+      <a href="/">
+        // Derpyzza's notes :D
+      </a>
+      <div>
+        <a href="/index.html">home</a>
+        <span>/</span>
+        <a href="/archive.html">archive</a>
+        <span>/</span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+  </header>
 
-				<div class="note">
+  <main>
+    <section id="main">
+      <hgroup>
+        <div class="datebar">
+          <span> 26th October, 2024 </span>
+          <a href="/public/archive.html">Go back</a>
+        </div>
+        <h1>Writing Jenny</h1>
+        <h4>My tiny static site generator</h4>
+      </hgroup>
+
+      <div class="note">
   <h3>Notice</h3>
   This post is pretty old.
   It was written for an older version of this site, which
@@ -77,21 +92,26 @@ as of writing this, jenny is still missing a couple features that i would like t
 i'd like to quickly thank <a href="https://github.com/munificent/game-programming-patterns">bob nystrom</a>, and <a href="https://github.com/hamaluik/blog.hamaluik.ca">kenton hamaluik</a> for their lovely static site generators, which i used as reference. go check them out, they were really helpful!
 this is my first ever blog post, so sorry for the monotonous tone. it'll definitely get better soon lol.</p>
 
-      </section>
+    </section>
 
-    </main>
+  </main>
 
-    <footer id="footer">
-      <hr />
-       <nav>
-        <div>
-          <a href="/index.html">home</a>
-          <span>/</span>
-          <a href="/archive.html">archive</a>
-          <span>/</span>
-          <a href="https://github.com/derpyzza">github</a>
-        </div>
-      </nav>
-    </footer>
-  </body>
+  <footer id="footer">
+    <hr />
+    <nav>
+      <span>
+        Derpyzza — 2024
+      </span>
+      <div>
+        <a href="/index.html">home</a>
+        <span> / </span>
+        <a href="/archive.html">archive</a>
+        <span> / </span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+      <a href=" ">back to top</a>
+    </nav>
+  </footer>
+</body>
+
 </html>

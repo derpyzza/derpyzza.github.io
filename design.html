@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derpyzza's site</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css" />
+</head>
+
+<body>
+  <header id="header">
+      <a href="/">
+        // Derpyzza's notes :D
+      </a>
+      <div>
+        <a href="/index.html">home</a>
+        <span>/</span>
+        <a href="/archive.html">archive</a>
+        <span>/</span>
+        <a href="https://github.com/derpyzza">github</a>
+      </div>
+  </header>
+  <main>
+    <section id="main">
+      <hgroup>
+        <div class="datebar">
+          <span> 26th October, 2024 </span>
+          <a href="/public/archive.html">Go back</a>
+        </div>
+        <h1>The longest title i can reasonably think of achieving, unless for some reason i turn into
+          an unreasonable person who wants a really really really long title, in which case i suppose i should try
+          and test that case anyway, just to see how it looks. However, if i do not test it, maybe it will make
+          unreasonable-me turn into reasonable-me after having to implement the ability to have long titles for a
+          blog post annoys him into using shorter titles. But i guess i'll just try and support long titles anyway, because maybe i'll discover that really, unreasonable me was
+          not that unreasonable, and the <em>real</em> unreasonable one was, in fact, reasonable me.
+        </h1>
+        <h4>This is the subtitle, which describes the title in greater detail, or perhaps adds extra context to
+          get the reader in the right headspace before reading this article, or maybe it just contains a silly joke
+          or comment that i couldn't fit into the title but it wouldn't fit in properly in the main text
+          either.</h4>
+      </hgroup>
+      <article>
+        <div id="toc">
+          <ul class="toc">
+            <a href="#main">
+              Title
+            </a>
+            <a href="#h1">
+              <li>
+                Heading 1
+              </li>
+            </a>
+            <ul>
+              <a href="#h2">
+                <li>
+                  Heading 2
+                </li>
+              </a>
+              <ul>
+
+                <a href="#h3">
+                  <li>
+                    Heading 3
+                  </li>
+                </a>
+              </ul>
+            </ul>
+            <a href="#footnotes">
+              <li>
+                Footnotes & Links
+              </li>
+            </a>
+          </ul>
+        </div>
+
+        <h2 id="h1"><a href="#h1">#</a> Heading 1</h2>
+        <p>hello this is text</p>
+        <h3 id="h2"><a href="#h2">#</a> Heading 2</h3>
+        <p>hello this is text</p>
+        <h4 id="h3"><a href="#h3">#</a> Heading 3</h4>
+        <p>hello this is text</p>
+
+        <br>
+        <div class="infobox note">
+          <h3>Notice</h3>
+          Hi, this is a notice.
+          This post is a design debug post.
+          <hr>
+          Nice.
+        </div>
+
+
+        <br><br>
+
+        <div class="infobox hint">
+          <!-- <h3>Hint</h3> -->
+          <!-- Hi, this is a hint. -->
+          <b>Hint: </b>This post is a design debug post.
+          <!-- <hr> -->
+          <!-- Nice. -->
+        </div>
+
+        <br>
+
+        <p> <strong>Lorem ipsum dolor sit amet</strong>, <i>consectetur</i> <strong><i>elit</i></strong>.
+          Aliquam scelerisque volutpat vehicula.
+          Sed sit amet congue nunc. Nam nec nisl euismod, pellentesque purus eu, vehicula nisl.
+          Proin ipsum orci, efficitur egestas imperdiet eget, pharetra a enim. Etiam consequat, tellus ut tempor
+          auctor, felis libero aliquam risus, id tincidunt nisl tortor a felis.
+          Quisque scelerisque quis magna non semper.
+        </p>
+        <span class="aside" id="side-01"><small>1. </small>note 1</span>
+        <p>
+          Curabitur maximus mattis nisi, eu vehicula massa tempor sed
+          Donec sollicitudin vestibulum <sup><a id="link-01" href="#foot-01">[1]</a></sup> justo sit amet
+          rutrum. Aenean faucibus interdum bibendum.
+        </p>
+        <p>
+          Pellentesque felis quam, ultricies et ullamcorper quis, euismod ac leo. Mauris eleifend et tortor ac
+          maximus.
+          Duis sit amet erat non ipsum suscipit molestie quis cursus justo. Nulla vehicula est eu magna
+          imperdiet cursus.
+          Cras quis sem quis libero vestibulum vestibulum ut quis quam. Pellentesque ipsum magna, laoreet in
+          lacinia ut, porta ut sem.
+          Aliquam arcu massa, mattis sed pulvinar sed <span class="aside" id="side-02"><small>2. </small>super
+            hi super super super super super super super duper long note</span>
+          <sup><a id="link-02" href="#foot-02">[2]</a></sup>
+          aliquam vitae turpis. Cras tincidunt, arcu in pulvinar egestas,
+          erat eros vestibulum erat, a aliquet eros metus sit <mark>amet risus</mark>.
+        </p>
+        <span class="aside" id="side-0"><small>3. </small>note 3</span>
+        <p>
+          Nullam porttitor <sup><a id="link-03" href="#foot-03">[3]</a></sup>, lorem pulvinar fermentum viverra,
+          lorem est faucibus risus, et commodo sapien tellus eget nibh. Vivamus vehicula ex id euismod dapibus.
+          Quisque sit amet ipsum a massa feugiat auctor in non est. Phasellus at elit condimentum, dignissim
+          arcu id, finibus lorem. Curabitur nisi elit, molestie vitae ullamcorper venenatis, semper eu nibh.</p>
+        </p>
+        <ul>
+          <li>item</li>
+          <ul>
+            <li>subitem</li>
+            <ul>
+              <li>subsubitem</li>
+              <li>subsubitem</li>
+              <li>subsubitem</li>
+              <li>subsubitem</li>
+            </ul>
+            <li>subitem</li>
+            <li>subitem</li>
+          </ul>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+        <br>
+
+        <div class="language-c code-highlight" lang="crystal">
+          <pre>
+<code>#include &lt;stdio.h&gt;</code>
+<code></code>
+<code>the colour scheme is a bit of a WIP</code>
+<code></code> 
+<code class="s">"string yaay"</code>
+<code class="n">230.43 34 0xbeef</code>
+<code class="k">for if int void import</code>
+<code class="i">Vector Logger Animal x y z</code>
+<code class="c">// hello this is a comment</code>
+<code></code>
+<code class="k">int</code>
+<code><span class="k">main</span>(<span class="k">void</span>) {</code>
+<code>  int x = 10;</code>
+<code>  if (x == 10)</code>
+<code>    printf("hello world %i", x);</code>
+<code>  else if ( x != 10 )</code>
+<code>    printf("hello planet %i", x);</code>
+<code>}</code>
+</pre>
+        </div>
+        <br>
+        <br>
+
+        <!-- <div class="code-box">
+        <div class="code-side">$</div>
+        cd build && make run
+      </div> -->
+        <div class="code-box" style="display: flex;padding: 0;">
+          <div class="code-side">>_</div>
+          <div class="code-body" style="color: var(--nm); padding: 12px 0px;width: 100%;margin-left: 16px;">
+            cd build &amp;&amp; make run</div>
+        </div>
+        <p>yaay</p>
+
+        <ol>
+          <li>something</li>
+          <li>something</li>
+          <ol>
+            <li>something</li>
+            <li>something</li>
+            <ul>
+              <li>something</li>
+              <li>something</li>
+            </ul>
+            <li>something</li>
+          </ol>
+          <li>something</li>
+          <li>something</li>
+        </ol>
+
+        <hr>
+        <p>
+          Lorem ipsum dolor sit amet <a href="https://derpyzza.github.io/">here</a> <sup><a id="link-04"
+              href="#foot-04">[4]</a></sup> <span class="aside"><small>4.
+            </small>https://derpyzza.github.io/</span>, consectetur adipiscing elit. Aliquam scelerisque
+          volutpat vehicula. Sed sit amet congue nunc. Nam nec nisl euismod, pellentesque purus eu, vehicula
+          nisl. Proin ipsum orci, efficitur egestas imperdiet eget, pharetra a enim. Etiam consequat, tellus ut
+          tempor auctor, felis libero aliquam risus, id tincidunt nisl tortor a felis. Quisque scelerisque quis
+          magna non semper. Curabitur maximus mattis nisi, eu vehicula massa tempor sed.
+          Donec sollicitudin vestibulum justo sit amet rutrum. Aenean faucibus interdum bibendum. Pellentesque
+          felis quam, ultricies et ullamcorper quis, euismod ac leo. Mauris eleifend et tortor ac maximus. Duis
+          sit amet erat non ipsum suscipit molestie quis cursus justo. Nulla vehicula est eu magna imperdiet
+          cursus. Cras quis sem quis libero vestibulum vestibulum ut quis quam. Pellentesque ipsum magna,
+          laoreet in lacinia ut, porta ut sem.
+          Aliquam arcu massa, mattis sed pulvinar sed, aliquam vitae turpis. Cras tincidunt, arcu in pulvinar
+          egestas, erat eros vestibulum erat, a aliquet eros metus sit amet risus. Nullam porttitor, lorem
+          pulvinar fermentum viverra, lorem est faucibus risus, et commodo sapien tellus eget nibh. Vivamus
+          vehicula ex id euismod dapibus. Quisque sit amet ipsum a massa feugiat auctor in non est. Phasellus at
+          elit condimentum, dignissim arcu id, finibus lorem. Curabitur nisi elit, molestie vitae ullamcorper
+          venenatis, semper eu nibh.
+        </p>
+    </section>
+    </article>
+    <section id="footnotes">
+      <span>
+        <h2>Footnotes & Links</h2>
+      </span>
+      <ul>
+        <li id="foot-01"><span><a href="#link-01">[1]</a></span> note 1</li>
+        <li id="foot-02"><span><a href="#link-02">[2]</a></span> note 2</li>
+        <li id="foot-03"><span><a href="#link-03">[3]</a></span> note 3</li>
+        <li id="foot-04"><span><a href="#link-04">[4]</a></span> https://derpyzza.github.io/</li>
+      </ul>
+
+    </section>
+
+    <footer id="footer">
+      <hr />
+      <nav>
+        <span>
+          Derpyzza — 2024
+        </span>
+        <div>
+          <a href="/index.html">home</a>
+          <span> / </span>
+          <a href="/archive.html">archive</a>
+          <span> / </span>
+          <a href="https://github.com/derpyzza">github</a>
+        </div>
+        <a href=" ">back to top</a>
+      </nav>
+    </footer>
+  </main>
+</body>
+
+</html>
