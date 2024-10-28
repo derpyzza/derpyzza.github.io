@@ -4,7 +4,7 @@
 
 ---
 
-hello writing writing i am writing [1]
+hello writing writing i am writing [ i was bored one day so i decided to write something. Not knowing what to write, i just started vomitting words on the page. This is what came out, unedited ( or mostly unedited ).](_)
 
 
 people should write more often,
@@ -37,5 +37,3 @@ However that isn't the point, what i want to talk about is just how impossible i
 
 Although i doubt most scholars tried to master a billion subjects at once, they only specialized in a handful of subjects and aimed for a high quality of knowledge over a high quantity.
 Perhaps that is what we should aim for too.
-
-[1] i was bored one day so i decided to write something. Not knowing what to write, i just started vomitting words on the page. This is what came out, unedited ( or mostly unedited ).

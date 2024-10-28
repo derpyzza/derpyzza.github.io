@@ -4,7 +4,7 @@
 ---
 
 Back in 2022 i decided to start a tiny little personal blog. i designed a lightweight website, and spun up a 
-quick little python script that acted as a static site generator [1] where i wrote my blogposts in markdown in a source folder somewhere, and my script then translated them into html files with the help of predefined templates. that blog only lasted one blogpost before i abandoned it / forgot about it.
+quick little python script that acted as a static site generator [I named it jenny!](_) where i wrote my blogposts in markdown in a source folder somewhere, and my script then translated them into html files with the help of predefined templates. that blog only lasted one blogpost before i abandoned it / forgot about it.
 
 Fast forward to april 2023. i started cutting out social media from my devices, and consuming a lot more medium-to-long-form-content, like books and blogs, which made me want to re-start my blog. there was, however, a problem with my old setup: my beloved little python script ***sucked***. it was a tiny hacky terribly-slow little script designed solely to work on that specific website with that specific design, with no error handling, no configuration ability, no nothing!
 
@@ -31,7 +31,7 @@ I abandoned the go generator (surprise surprise), and that is when i started my 
 
 ## The inevitability of jenny
 
-After struggling with fennel one day [2], i wandered over to my original python repo. i decided to either use jenny, or some popular static site generator [3] to atleast get a blog up and running while i messed around with my better-stronger-faster-one-ssg-to-rule-them-all-ssg. 
+After struggling with fennel one day [I wanted to write a custom markdown parser, along with a lisp-based templating language in fennel](_), i wandered over to my original python repo. i decided to either use jenny, or some popular static site generator [But but my customization!! my minimalism!! noooooooooooo](_) to atleast get a blog up and running while i messed around with my better-stronger-faster-one-ssg-to-rule-them-all-ssg. 
 
 I went ahead and pulled down the original jenny repo, and quickly tweaked it so that it was a tiny hacky terribly-slow little script designed solely to work on this specific website with this specific design, with no error handling, no configuration ability, no nothing.
 
@@ -42,11 +42,5 @@ It worked pretty well. i was able to get my website up and running, the way i wa
 So perhaps i did not in fact need a super high powered ultra mega minimal exciting perfect static site generator to rule them all that will be done soon™. perhaps all i needed was a hacky little python script i wrote one year ago that works perfectly fine, right now.
 
 * * *
-
-[1] I named it jenny!
-
-[2] I wanted to write a custom markdown parser, along with a lisp-based templating language in fennel 
-
-[3] But but my customization!! my minimalism!! noooooooooooo
-
+ 
 <span>*i still am going to make my ultra minimal mega static site generator sometime soon tho. err maybe.* </span>

@@ -15,50 +15,34 @@
 </head>
 
 <body> 
-  <header id="header">
-      <a href="/">
-        // Derpyzza's notes :D
-      </a>
-      <div>
-        <a href="/index.html">home</a>
-        <span>/</span>
-        <a href="/archive.html">archive</a>
-        <span>/</span>
-        <a href="https://github.com/derpyzza">github</a>
-      </div>
-  </header>
-
   <main>
     <section id="main">
       <hgroup>
         <div class="datebar">
-          <span> 26th October, 2024 </span>
+          <span>{{date}}</span>
           <a href="/public/archive.html">Go back</a>
         </div>
         <h1>{{title}}</h1>
-        <h4>{{subtitle}}</h4>
+        {{subtitle}}
       </hgroup>
 
+      <article>
       {{content}}
+      </article>
 
     </section>
 
   </main>
 
   <footer id="footer">
-    <hr />
     <nav>
-      <span>
-        Derpyzza — 2024
-      </span>
-      <div>
         <a href="/index.html">home</a>
         <span> / </span>
-        <a href="/archive.html">archive</a>
+        <a href="/public/archive.html">archive</a>
         <span> / </span>
         <a href="https://github.com/derpyzza">github</a>
-      </div>
-      <a href=" ">back to top</a>
+        <span> / </span>
+        <a href=" ">back to top</a>
     </nav>
   </footer>
 </body>
