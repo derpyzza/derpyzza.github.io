@@ -248,6 +248,21 @@ def process_headings( post, is_index = False ):
     return str(soup)
     pass
 
+def process_code_blocks(post):
+    soup = Soup(post, 'html.parser')
+
+    for c in soup.find_all('code'):
+        wrapper = soup.new_tag('div')
+        wrapper['class'] = 'code-highlight'
+        code = soup.new_tag('code')
+        code.string = c.string
+        wrapper.append(code)
+        
+        c.replace_with(wrapper)
+        wrapper.insert_before(soup.new_tag('br'))
+        wrapper.insert_after(soup.new_tag('br'))
+    return str(soup)
+
 
 def format_file(post, template):
 
@@ -287,6 +302,7 @@ def process_posts():
                 post['post_content'] = process_headings(post['post_content'])
                 if ok:
                     post['post_content'] = build_footnotes(post['post_content'], links)                
+            post['post_content'] = process_code_blocks(post['post_content'])
 
         file_name = os.path.basename( f )
         destination = os.path.join( out_dir , os.path.splitext( file_name )[ 0 ] + ".html" )

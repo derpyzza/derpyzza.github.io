@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/assets/main.css" />
 </head>
 
-<body> 
+<body>
   <main>
     <section id="main">
       <hgroup>
@@ -27,31 +27,85 @@
       </hgroup>
 
       <article>
-      <div id="toc"><ul class="toc"><a href=" ">Title</a><ul><a href="#h0"><li>Narrator voice: He did not, in fact, make the ultimate tiny ssg</li></a><a href="#h1"><li>The inevitability of jenny</li></a><a href="#h2"><li>This website runs on jenny</li></a></ul></ul></div><p>Back in 2022 i decided to start a tiny little personal blog. i designed a lightweight website, and spun up a 
-quick little python script that acted as a static site generator <sup><a href="#note-1" id="link-1">[1]</a></sup><span class="aside"><small>1.</small> I named it jenny!</span> where i wrote my blogposts in markdown in a source folder somewhere, and my script then translated them into html files with the help of predefined templates. that blog only lasted one blogpost before i abandoned it / forgot about it.</p>
-<p>Fast forward to april 2023. i started cutting out social media from my devices, and consuming a lot more medium-to-long-form-content, like books and blogs, which made me want to re-start my blog. there was, however, a problem with my old setup: my beloved little python script <strong><em>sucked</em></strong>. it was a tiny hacky terribly-slow little script designed solely to work on that specific website with that specific design, with no error handling, no configuration ability, no nothing!</p>
-<p>That was, obviously, completely unacceptable. i decided to create the ultimate tiny static site generator, one that is both flexible and configurable <em>and</em> tiny. the one tiny ssg to rule them all!!!</p>
-<h3 id="h0"><a href="#h0">#</a> Narrator voice: He did not, in fact, make the ultimate tiny ssg</h3>
-<p>So, i failed. Yup. My plans were big and grandiose, but my skills and patience were painfully limited.
-originally, the plan was to simply remove all of my original painpoints with jenny, and to just make it more user friendly. the plan was to rewrite jenny in Go, as it is, and just add some tiny little QOL features, such as</p>
-<ul>
-<li>error handling</li>
-<li>project generation</li>
-<li>modular codebase</li>
-</ul>
-<p>Sounds simple, right? </p>
-<p>Right??</p>
-<p>Wrong.</p>
-<p>You see while it worked (mostly. i did not finish the whole thing), it had a major, unforgivable flaw: it was <strong>boring</strong>. working on it was not exciting in the least, as i was essentially just copying the python script to Go, and sprinkling a couple QOL features here and there. Absolutely unacceptable; where's the pizzaz? the glamour? the uniqueness and the quirkyness?? where's the excitement of it all???</p>
-<p>I abandoned the go generator (surprise surprise), and that is when i started my slow descent to madness. i spent about two weeks staring at other ssgs, reading blogposts about ssgs, comparing programming languages, furiously scribbling notes, daydreaming about working on my ssg, etc. etc. all the while starting random little implementations of my ideas before scrapping them and going back to the procrastination/research loop.</p>
-<h3 id="h1"><a href="#h1">#</a> The inevitability of jenny</h3>
-<p>After struggling with fennel one day <sup><a href="#note-2" id="link-2">[2]</a></sup><span class="aside"><small>2.</small> I wanted to write a custom markdown parser, along with a lisp-based templating language in fennel</span>, i wandered over to my original python repo. i decided to either use jenny, or some popular static site generator <sup><a href="#note-3" id="link-3">[3]</a></sup><span class="aside"><small>3.</small> But but my customization!! my minimalism!! noooooooooooo</span> to atleast get a blog up and running while i messed around with my better-stronger-faster-one-ssg-to-rule-them-all-ssg. </p>
-<p>I went ahead and pulled down the original jenny repo, and quickly tweaked it so that it was a tiny hacky terribly-slow little script designed solely to work on this specific website with this specific design, with no error handling, no configuration ability, no nothing.</p>
-<h3 id="h2"><a href="#h2">#</a> This website runs on jenny</h3>
-<p>It worked pretty well. i was able to get my website up and running, the way i wanted it to be. i can now post my notes and thoughts on this site, and have them go online without any problems, which is precisely what jenny is meant to do.</p>
-<p>So perhaps i did not in fact need a super high powered ultra mega minimal exciting perfect static site generator to rule them all that will be done soon™. perhaps all i needed was a hacky little python script i wrote one year ago that works perfectly fine, right now.</p>
-<hr/>
-<p><span><em>i still am going to make my ultra minimal mega static site generator sometime soon tho. err maybe.</em> </span></p><section><h2>Footnotes + Links</h2><ul><li id="note-1"><a href="#link-1">[1]</a> I named it jenny!</li><li id="note-2"><a href="#link-2">[2]</a> I wanted to write a custom markdown parser, along with a lisp-based templating language in fennel</li><li id="note-3"><a href="#link-3">[3]</a> But but my customization!! my minimalism!! noooooooooooo</li></ul></section>
+        <div id="toc">
+          <ul class="toc"><a href=" ">Title</a>
+            <ul><a href="#h0">
+                <li>Narrator voice: He did not, in fact, make the ultimate tiny ssg</li>
+              </a><a href="#h1">
+                <li>The inevitability of jenny</li>
+              </a><a href="#h2">
+                <li>This website runs on jenny</li>
+              </a></ul>
+          </ul>
+        </div>
+        <p>Back in 2022 i decided to start a tiny little personal blog. i designed a lightweight website, and spun up a
+          quick little python script that acted as a static site generator <sup><a href="#note-1"
+              id="link-1">[1]</a></sup> where i wrote my
+          blogposts in markdown in a source folder somewhere, and my script then translated them into html files with
+          the help of predefined templates. that blog only lasted one blogpost before i abandoned it / forgot about it.
+        </p>
+        <aside><small>1.</small> I named it jenny!</aside>
+        <p>Fast forward to april 2023. i started cutting out social media from my devices, and consuming a lot more
+          medium-to-long-form-content, like books and blogs, which made me want to re-start my blog. there was, however,
+          a problem with my old setup: my beloved little python script <strong><em>sucked</em></strong>. it was a tiny
+          hacky terribly-slow little script designed solely to work on that specific website with that specific design,
+          with no error handling, no configuration ability, no nothing!</p>
+        <p>That was, obviously, completely unacceptable. i decided to create the ultimate tiny static site generator,
+          one that is both flexible and configurable <em>and</em> tiny. the one tiny ssg to rule them all!!!</p>
+        <h3 id="h0"><a href="#h0">#</a> Narrator voice: He did not, in fact, make the ultimate tiny ssg</h3>
+        <p>So, i failed. Yup. My plans were big and grandiose, but my skills and patience were painfully limited.
+          originally, the plan was to simply remove all of my original painpoints with jenny, and to just make it more
+          user friendly. the plan was to rewrite jenny in Go, as it is, and just add some tiny little QOL features, such
+          as</p>
+        <ul>
+          <li>error handling</li>
+          <li>project generation</li>
+          <li>modular codebase</li>
+        </ul>
+        <p>Sounds simple, right? </p>
+        <p>Right??</p>
+        <p>Wrong.</p>
+        <p>You see while it worked (mostly. i did not finish the whole thing), it had a major, unforgivable flaw: it was
+          <strong>boring</strong>. working on it was not exciting in the least, as i was essentially just copying the
+          python script to Go, and sprinkling a couple QOL features here and there. Absolutely unacceptable; where's the
+          pizzaz? the glamour? the uniqueness and the quirkyness?? where's the excitement of it all???
+        </p>
+        <p>I abandoned the go generator (surprise surprise), and that is when i started my slow descent to madness. i
+          spent about two weeks staring at other ssgs, reading blogposts about ssgs, comparing programming languages,
+          furiously scribbling notes, daydreaming about working on my ssg, etc. etc. all the while starting random
+          little implementations of my ideas before scrapping them and going back to the procrastination/research loop.
+        </p>
+        <h3 id="h1"><a href="#h1">#</a> The inevitability of jenny</h3>
+        <p>After struggling with fennel one day <sup><a href="#note-2" id="link-2">[2]</a></sup>
+
+          , i wandered over to my original python repo. i decided to either use
+          jenny, or some popular static site generator <sup><a href="#note-3" id="link-3">[3]</a></sup>
+          to atleast get a blog up and running while i messed around with my better-stronger-faster-one-ssg-to-rule-them-all-ssg.
+        </p>
+        <aside><small>2.</small> I wanted to write a custom markdown parser, along with a lisp-based templating language in fennel</aside>
+        <aside><small>3.</small> But but my customization!! my minimalism!! noooooooooooo</aside>
+        <p>I went ahead and pulled down the original jenny repo, and quickly tweaked it so that it was a tiny hacky
+          terribly-slow little script designed solely to work on this specific website with this specific design, with
+          no error handling, no configuration ability, no nothing.</p>
+        <h3 id="h2"><a href="#h2">#</a> This website runs on jenny</h3>
+        <p>It worked pretty well. i was able to get my website up and running, the way i wanted it to be. i can now post
+          my notes and thoughts on this site, and have them go online without any problems, which is precisely what
+          jenny is meant to do.</p>
+        <p>So perhaps i did not in fact need a super high powered ultra mega minimal exciting perfect static site
+          generator to rule them all that will be done soon™. perhaps all i needed was a hacky little python script i
+          wrote one year ago that works perfectly fine, right now.</p>
+        <hr />
+        <p><span><em>i still am going to make my ultra minimal mega static site generator sometime soon tho. err
+              maybe.</em> </span></p>
+        <section>
+          <h2>Footnotes + Links</h2>
+          <ul>
+            <li id="note-1"><a href="#link-1">[1]</a> I named it jenny!</li>
+            <li id="note-2"><a href="#link-2">[2]</a> I wanted to write a custom markdown parser, along with a
+              lisp-based templating language in fennel</li>
+            <li id="note-3"><a href="#link-3">[3]</a> But but my customization!! my minimalism!! noooooooooooo</li>
+          </ul>
+        </section>
       </article>
 
     </section>
@@ -60,13 +114,13 @@ originally, the plan was to simply remove all of my original painpoints with jen
 
   <footer id="footer">
     <nav>
-        <a href="/index.html">home</a>
-        <span> / </span>
-        <a href="/public/archive.html">archive</a>
-        <span> / </span>
-        <a href="https://github.com/derpyzza">github</a>
-        <span> / </span>
-        <a href=" ">back to top</a>
+      <a href="/index.html">home</a>
+      <span> / </span>
+      <a href="/public/archive.html">archive</a>
+      <span> / </span>
+      <a href="https://github.com/derpyzza">github</a>
+      <span> / </span>
+      <a href=" ">back to top</a>
     </nav>
   </footer>
 </body>

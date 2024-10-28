@@ -13,6 +13,7 @@
   */
 
   --bg: #161616;
+  --bg2: #464646;
   /*normal*/
   --nm: #fff;
   /*background*/
@@ -28,6 +29,7 @@
   /*visited ( for links ) */
 
   --note-bg: #231b19;
+  --side-bg: #242121;
   --hint-bg: #191e23;
 
   --code-bg: #0e0e0e;
@@ -39,21 +41,30 @@
     /*max width*/
 }
 
-/*
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --nm: #272727;
-    --li: #9f9f9f;
-    --note-bg: #e99fff;
-    --hint-bg: #acd6cf;
-    --code-bg: #f0f4f7;
+/* 
+#f4ecd8
+#5b4636
+ */
 
+@media (prefers-color-scheme: light) { 
+  :root {
+    --bg: #f4ecd8;
+    --bg2: #dbc6b2;
+    --nm: #1a110b;
+    --li: #73563a;
+    --side-bg: #dbc6b2;
+    --note-bg: #ffd9bc;
+    --hint-bg: #cfece7;
+    --code-fg: #f3f1eb;
     --code-box-side-bg: #000;
     --code-box-side-fg: #fff;
+    --dc: #917e71;
+    --ac: #df5b3e;
+    --a2: #fda572;
+    --vi: #b83623;
   }
 }
-*/
+
 
 * {
   padding: 0;
@@ -64,6 +75,7 @@ body {
   padding: 4rem 1rem 1rem;
   color: var(--nm);
   background-color: var(--bg);
+  line-height: 155%;
   /* background-color: #0f0f0f; */
   font-family: 'Noto Sans';
   /* font-size: 18px; */
@@ -131,7 +143,12 @@ hgroup h4 {
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  line-height: 1.5rem;
+}
+
+blockquote {
+  padding: 1rem;
+  border: solid 1 var(--ac);
+  margin-left: 1rem;
 }
 
 /* === LINKS === */
@@ -177,8 +194,7 @@ img {
   border-radius: 10px;
 }
 
-time,
-aside {
+time {
   color: var(--li);
   font-weight: bolder;
 }
@@ -236,8 +252,10 @@ article>hr::before {
 }
 
 mark {
-  background-color: var(--bg);
-  color: var(--vi);
+	background-color: var(--bg2);
+	color: var(--nm);
+	padding: 0px 5px;
+	font-family: 'Fira Code';
 }
 
 .datebar {
@@ -302,13 +320,31 @@ mark {
   color: #438fd6;
 }
 
-aside[id^="side-"],
-.aside {
-  display: inline;
+a[href^="#link-"] {
+  text-decoration: none;
+}
+
+aside, .aside {
+  clear: right;
   float: right;
   position: relative;
   width: 20vw;
-  margin-right: -22vw;
+  padding: 1rem;
+  background-color: var(--side-bg);
+  color: var(--nm);
+  font-size: .85rem;
+  font-weight: normal;
+  /* border-radius: 8px; */
+  border-left: 4px solid var(--dc);
+  margin: 10px 0px;
+  max-width: 30ch;
+  line-height: 1.5rem;
+  margin-right: -26rem;
+}
+
+aside b {
+  display: block;
+  margin-bottom: 6px;
 }
 
 .code-highlight {
@@ -326,7 +362,7 @@ aside[id^="side-"],
 code {
   border-radius: 10px;
   font-family: 'Fira Code';
-  color: var(--nm);
+  color: var(--code-fg);
   background-color: var(--code-bg);
   width: 100%;
   margin-left: 16px;
@@ -382,8 +418,12 @@ footer nav {
 }
 
 @media screen and (max-width: 1400px) {
-  .aside {
-    display: none;
+  aside {
+    float: unset;
+    clear: unset;
+    margin: 10px 0px;
+    width: 90%;
+    max-width: unset;
   }
 
   hgroup {

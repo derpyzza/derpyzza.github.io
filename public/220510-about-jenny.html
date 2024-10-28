@@ -1,75 +1,231 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Derpyzza's site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derpyzza's site</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/assets/main.css" />
-</head>
+  <body>
+    <main>
+      <section id="main">
+        <hgroup>
+          <div class="datebar">
+            <span>10th May, 2022</span>
+            <a href="/public/archive.html">Go back</a>
+          </div>
+          <h1>Writing Jenny</h1>
+          <h4>My tiny static site generator</h4>
+        </hgroup>
 
-<body> 
-  <main>
-    <section id="main">
-      <hgroup>
-        <div class="datebar">
-          <span>10th May, 2022</span>
-          <a href="/public/archive.html">Go back</a>
-        </div>
-        <h1>Writing Jenny</h1>
-        <h4>My tiny static site generator</h4>
-      </hgroup>
+        <article>
+          <div id="toc">
+            <ul class="toc">
+              <a href=" ">Title</a
+              ><a href="#h0">
+                <li>Jenny</li> </a
+              ><a href="#h1">
+                <li>What</li> </a
+              ><a href="#h2">
+                <li>Why</li> </a
+              ><a href="#h3">
+                <li>How</li> </a
+              ><a href="#h4">
+                <li>Final notes</li>
+              </a>
+            </ul>
+          </div>
+          <h2 id="h0"><a href="#h0">#</a> Jenny</h2>
+          <p>
+            i've been wanting to start a small blog to kinda document my
+            projects and stuff for a while now, and a couple days ago i decided
+            to just sit down and finally make one. going into it however, i had
+            some requirements i needed to satisfy:
+          </p>
+          <ul>
+            <li>
+              the site needed to be lightweight. like
+              <em>really</em> lightweight. like
+              fits-in-under-512-kb-so-i-can-join-the-<a
+                id="link-01"
+                href="https://512kb.club"
+                >512kb-club</a> lightweight.
+            </li>
+            <li>
+              quick and easy to use / deploy. i didn't want to learn a super
+              cool fancy website builder tool that reads your mind and spits out
+              your dream site.
+            </li>
+            <li>no javascript, atleast to start out with.</li>
+            <li>
+              no fancy databases. each post would just be a separate html file.
+            </li>
+            <li>free and open source.</li>
+          </ul>
+          <p>
+            essentially, i wanted a very minimal setup. i write a post, post
+            appears on my website. simple. before writing jenny i tried out
+            <a id="link-02" href="https://jekyllrb.com/">jekyll</a
+            >, and while jekyll sort of ticked off all my requirements, i still
+            didn't like it too much. the main reason was because i didn't really
+            understand how it worked too well, and i really did not want to sit
+            down and read the documentation for it ( im lazy ). so as a fix for
+            my problems, i just wrote jenny :D <sup><mark>1.</mark></sup>
+          </p>
+          <aside>
+            <b>1.</b> jenny is derived from the word 'generator'. as in,
+            'jenny-rator'. i uwu-fied it kinda ig
+          </aside>
+          <h2 id="h1"><a href="#h1">#</a> What</h2>
+          <p>
+            is jenny? jenny, is a small, super opinionated
+            <sup><mark>2.</mark></sup> static site
+            generator. it reads in every <mark>.md</mark> file from a
+            <mark>src/</mark> directory, translates them to a
+            <mark>.html</mark> with the help of a template
+            <mark>.html</mark> file which tells the script how to generate the
+            output files, and places them into a <mark>public/</mark> directory.
+            this way, i can just write all my posts in markdown (which is
+            essentially just plain text with extra features), and have the
+            script turn my posts to a web friendly format for others like you to
+            see!
+          </p>
+          <aside>
+            <b>2.</b> opinionated as in i was too lazy to add any sort of user
+            friendly features for anyone that isn't me
+          </aside>
+          <h2 id="h2"><a href="#h2">#</a> Why</h2>
+          <p>
+            would you write your own static site generator? why not use a
+            different one like hugo or something if you didn't like jekyll? why
+            not just simply write your posts in html? well, those are all
+            perfectly valid questions. the real reason i wrote my own static
+            site generator instead of just searching for a better one to use (
+            there's like <a id="link-5" href="https://jamstack.org/generators/">billions </a
+            > of them ) is
+            primarily because it sounded like an interesting project. it's
+            functionally very simple, you can extend it as much as you want, and
+            it's quite a useful tool, so writing my own was loads more fun and
+            educational than using someone else's project. if however, you do
+            not care about all that stuff and just want a simple way to write
+            your posts, i would just recommend using a static site generator
+            written by someone else. and as for writing my posts in html, while
+            it's a perfectly acceptable way to write a blog, it's frankly quite
+            a chore. so writing my own generator sounded a seemed to be the best
+            way to get exactly what i wanted :)
+          </p>
+          <h2 id="h3"><a href="#h3">#</a> How</h2>
+          <p>
+            does it really work? ( as of the time of writing ) jenny is
+            essentially just a small python script that expects three things: a
+            <mark>src/</mark> directory that contains <mark>.md</mark> files, an
+            <mark>assets/</mark> directory that contains a stylesheet and two
+            template <mark>.html</mark> files ( one for the main page, and one
+            for the actual posts themselves ) and a
+            <mark>public</mark> directory. the script reads through every
+            <mark>.md</mark> file in the <mark>src/</mark> directory, and first
+            off preprocesses the file for some metadata. metadata for jenny
+            follows the following syntax:
+          </p>
+          <br />
+          <div class="code-highlight"><code>$command args...</code></div>
+          <br />
+          <p>
+            metadata must always begin with a dollar symbol, immediately
+            followed by a command or keyword that tells the program what kind of
+            data it is, followed by a space delimited string of arguements to
+            the command. currently, jenny only supports three commands: title,
+            subtitle, and data. all three of these are used in displaying the
+            title of the post on the post page, as well as displaying the title
+            on the main page. after the preprocessing stage, jenny converts the
+            raw markdown posts to a <mark>.html</mark> page using the
+            aforementioned template files, and stores the post to a list of
+            posts along with their titles, subtitles, and dates. jenny then just
+            takes all that data, and feeds it through another template to
+            produce an index file as the landing page of the blog. and... that's
+            it! jenny is in itself a super basic script. it only does what it
+            needs to, and nothing else. it ends up being slightly not user
+            friendly as a direct cause of that simplicity sometimes, but that's
+            my fault for just rushing the implementation a bit hehe.
+          </p>
 
-      <article>
-      <div id="toc"><ul class="toc"><a href=" ">Title</a><a href="#h0"><li>Jenny</li></a><a href="#h1"><li>What</li></a><a href="#h2"><li>Why</li></a><a href="#h3"><li>How</li></a><a href="#h4"><li>Final notes</li></a></ul></div><h2 id="h0"><a href="#h0">#</a> Jenny</h2>
-<p>i've been wanting to start a small blog to kinda document my projects and stuff for a while now, and a couple days ago i decided to just sit down and finally make one. going into it however, i had some requirements i needed to satisfy:</p>
-<ul>
-<li>the site needed to be lightweight. like <em>really</em> lightweight. like fits-in-under-512-kb-so-i-can-join-the-<a href="https://512kb.club">512kb-club </a><sup><a href="#note-1" id="link-1">[1]</a></sup> lightweight.</li>
-<li>quick and easy to use / deploy. i didn't want to learn a super cool fancy website builder tool that reads your mind and spits out your dream site.</li>
-<li>no javascript, atleast to start out with.</li>
-<li>no fancy databases. each post would just be a separate html file.</li>
-<li>free and open source.</li>
-</ul>
-<p>essentially, i wanted a very minimal setup. i write a post, post appears on my website. simple. before writing jenny i tried out <a href="https://jekyllrb.com/">jekyll </a><sup><a href="#note-2" id="link-2">[2]</a></sup>, and while jekyll sort of ticked off all my requirements,
-i still didn't like it too much. the main reason was because i didn't really understand how it worked too well, and i really did not want to sit down and read the documentation for it ( im lazy ).
-so as a fix for my problems, i just wrote jenny :D <sup><a href="#note-3" id="link-3">[3]</a></sup><span class="aside"><small>3.</small> jenny is derived from the word 'generator'. as in, 'jenny-rator'. i uwu-fied it kinda ig</span></p>
-<h2 id="h1"><a href="#h1">#</a> What</h2>
-<p>is jenny? jenny, is a small, super opinionated <sup><a href="#note-4" id="link-4">[4]</a></sup><span class="aside"><small>4.</small> opinionated as in i was too lazy to add any sort of user friendly features for anyone that isn't me</span> static site generator.
-it reads in every <mark>.md</mark> file from a <mark>src/</mark> directory, translates them to a <mark>.html</mark> with the help of a template <mark>.html</mark> file which tells the script how to generate the output files, and places them into a <mark>public/</mark> directory. this way, i can just write all my posts in markdown (which is essentially just plain text with extra features), and have the script turn my posts to a web friendly format for
-others like you to see!</p>
-<h2 id="h2"><a href="#h2">#</a> Why</h2>
-<p>would you write your own static site generator? why not use a different one like hugo or something if you didn't like jekyll? why not just simply write your posts in html? well, those are all
-perfectly valid questions. the real reason i wrote my own static site generator instead of just searching for a better one to use ( there's like <a href="https://jamstack.org/generators/">billions </a><sup><a href="#note-5" id="link-5">[5]</a></sup> of them ) is primarily because it sounded
-like an interesting project. it's functionally very simple, you can extend it as much as you want, and it's quite a useful tool, so writing my own was loads more fun and educational than using someone 
-else's project. if however, you do not care about all that stuff and just want a simple way to write your posts, i would just recommend using a static site generator written by someone else. and as 
-for writing my posts in html, while it's a perfectly acceptable way to write a blog, it's frankly quite a chore. so writing my own generator sounded a seemed to be the best way to get exactly 
-what i wanted :)</p>
-<h2 id="h3"><a href="#h3">#</a> How</h2>
-<p>does it really work? ( as of the time of writing ) jenny is essentially just a small python script that expects three things: a <mark>src/</mark> directory that contains <mark>.md</mark> files, an 
-<mark>assets/</mark> directory that contains a stylesheet and two template <mark>.html</mark> files ( one for the main page, and one for the actual posts themselves ) and a <mark>public</mark> directory. the script reads through every <mark>.md</mark> file in the <mark>src/</mark> directory, and first off preprocesses the file for some metadata. metadata for jenny follows the following syntax:
-<code>$command args...</code>
-metadata must always begin with a dollar symbol, immediately followed by a command or keyword that tells the program what kind of data it is, followed by a space delimited string of arguements to the
-command. currently, jenny only supports three commands: title, subtitle, and data. all three of these are used in displaying the title of the post on the post page, as well as displaying the title on
-the main page. after the preprocessing stage, jenny converts the raw markdown posts to a <mark>.html</mark> page using the aforementioned template files, and stores the post to a list of posts along with their titles, subtitles, and dates. jenny then just takes all that data, and feeds it through another template to produce an index file as the landing page of the blog. and... that's it! jenny is in itself a super basic script. it only does what it needs to, and nothing else. it ends up being slightly not user friendly as a direct cause of that simplicity sometimes, but that's my fault for just rushing the implementation a bit hehe.</p>
-<h2 id="h4"><a href="#h4">#</a> Final notes</h2>
-<p>so, that's jenny! jenny was quite fun to work on, and most importantly, jenny is a very useful tool for me personally, which really makes all the html and css i had to write worth it in the end.
-as of writing this, jenny is still missing a couple features that i would like to add, namely some nice configuration features to make setting up a blog easier, as well as a checker thing that only updates the files that have been recently edited. i plan to write a blog post a week and my blog folder will really start filling up quickly, and i dont want to sit there waiting for python to try and format all the scripts.
-i'd like to quickly thank <a href="https://github.com/munificent/game-programming-patterns">bob nystrom </a><sup><a href="#note-6" id="link-6">[6]</a></sup>, and <a href="https://github.com/hamaluik/blog.hamaluik.ca">kenton hamaluik </a><sup><a href="#note-7" id="link-7">[7]</a></sup> for their lovely static site generators, which i used as reference. go check them out, they were really helpful!
-this is my first ever blog post, so sorry for the monotonous tone. it'll definitely get better soon lol.</p><section><h2>Footnotes + Links</h2><ul><li id="note-1"><a href="#link-1">[1]</a> https://512kb.club</li><li id="note-2"><a href="#link-2">[2]</a> https://jekyllrb.com/</li><li id="note-3"><a href="#link-3">[3]</a> jenny is derived from the word 'generator'. as in, 'jenny-rator'. i uwu-fied it kinda ig</li><li id="note-4"><a href="#link-4">[4]</a> opinionated as in i was too lazy to add any sort of user friendly features for anyone that isn't me</li><li id="note-5"><a href="#link-5">[5]</a> https://jamstack.org/generators/</li><li id="note-6"><a href="#link-6">[6]</a> https://github.com/munificent/game-programming-patterns</li><li id="note-7"><a href="#link-7">[7]</a> https://github.com/hamaluik/blog.hamaluik.ca</li></ul></section>
-      </article>
+          <h2 id="h4"><a href="#h4">#</a> Final notes</h2>
+          <p>
+            so, that's jenny! jenny was quite fun to work on, and most
+            importantly, jenny is a very useful tool for me personally, which
+            really makes all the html and css i had to write worth it in the
+            end. as of writing this, jenny is still missing a couple features
+            that i would like to add, namely some nice configuration features to
+            make setting up a blog easier, as well as a checker thing that only
+            updates the files that have been recently edited. i plan to write a
+            blog post a week and my blog folder will really start filling up
+            quickly, and i dont want to sit there waiting for python to try and
+            format all the scripts. i'd like to quickly thank
+            <a
+              id="link-06"
+              href="https://github.com/munificent/game-programming-patterns"
+              >bob nystrom</a
+            >, and
+            <a id="link-07" href="https://github.com/hamaluik/blog.hamaluik.ca"
+              >kenton hamaluik</a>
+             for their lovely static site generators, which i used as reference.
+            go check them out, they were really helpful! this is my first ever
+            blog post, so sorry for the monotonous tone. it'll definitely get
+            better soon lol.
+          </p>
+          <hr />
+          <section>
+            <h2>Footnotes</h2>
+            <ol>
+              <li id="note-3">
+                jenny is derived from the word 'generator'. as in,
+                'jenny-rator'. i uwu-fied it kinda ig <a href="#link-3">↩</a>
+              </li>
+              <li id="note-4">
+                opinionated as in i was too lazy to add any sort of user
+                friendly features for anyone that isn't me
+                <a href="#link-4">↩</a>
+              </li>
+            </ol>
+            <h2>Links</h2>
+            <ul>
+              <li id="note-1">
+                <b>512kb club:</b> https://512kb.club <a href="#link-4">↩</a>
+              </li>
+              <li id="note-2">
+                <b>Jekyll:</b> https://jekyllrb.com/ <a href="#link-4">↩</a>
+              </li>
+              <li id="note-5">
+                <b>billions:</b> https://jamstack.org/generators/
+                <a href="#link-4">↩</a>
+              </li>
+              <li id="note-6">
+                <b>Bob Nystrom</b>
+                https://github.com/munificent/game-programming-patterns
+                <a href="#link-4">↩</a>
+              </li>
+              <li id="note-7">
+                <b>kenton hamaluik</b>
+                https://github.com/hamaluik/blog.hamaluik.ca
+                <a href="#link-4">↩</a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </section>
+    </main>
 
-    </section>
-
-  </main>
-
-  <footer id="footer">
-    <nav>
+    <footer id="footer">
+      <nav>
         <a href="/index.html">home</a>
         <span> / </span>
         <a href="/public/archive.html">archive</a>
@@ -77,8 +233,7 @@ this is my first ever blog post, so sorry for the monotonous tone. it'll definit
         <a href="https://github.com/derpyzza">github</a>
         <span> / </span>
         <a href=" ">back to top</a>
-    </nav>
-  </footer>
-</body>
-
+      </nav>
+    </footer>
+  </body>
 </html>
