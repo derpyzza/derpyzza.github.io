@@ -3,20 +3,6 @@
 @post_date 2022.05.10
 ---
 
-<div class="infobox note">
-  <h3>Notice</h3>
-  This post is pretty old.
-  It was written for an older version of this site, which
-  had a radically different design to what it is now, which leads to it having weird
-  quirks that you won't notice in any other post on this site.
-  I originally got rid of this post when i got rid of the old site,
-  as i wanted to start afresh, but i've brought it back as i wanted to preserve a record
-  of my writing. As such, this post doesn't fit in very well with the rest of my site, and sticks out a bit.
-  I've cleaned it up just enough to make it work on this new site, but that still leaves
-  it with sections that don't make sense in the current layout.
-  But that's alright.
-</div>
-
 # Jenny
 i've been wanting to start a small blog to kinda document my projects and stuff for a while now, and a couple days ago i decided to just sit down and finally make one. going into it however, i had some requirements i needed to satisfy:
 
