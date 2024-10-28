@@ -39,14 +39,12 @@
     /*max width*/
 }
 
+/*
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
-    /*background*/
     --nm: #272727;
-    /*normal*/
     --li: #9f9f9f;
-    /*light*/
     --note-bg: #e99fff;
     --hint-bg: #acd6cf;
     --code-bg: #f0f4f7;
@@ -55,6 +53,7 @@
     --code-box-side-fg: #fff;
   }
 }
+*/
 
 * {
   padding: 0;
