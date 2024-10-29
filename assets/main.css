@@ -46,7 +46,7 @@
 #5b4636
  */
 
-@media (prefers-color-scheme: light) { 
+@media (prefers-color-scheme: light) {
   :root {
     --bg: #f4ecd8;
     --bg2: #dbc6b2;
@@ -90,12 +90,15 @@ section {
   word-wrap: break-word;
 }
 
-section, h2, h3, h4 {
+section,
+h2,
+h3,
+h4 {
   margin-top: 2rem;
 }
 
-.infobox h2, 
-.infobox h3, 
+.infobox h2,
+.infobox h3,
 .infobox h4 {
   margin-top: 0;
 }
@@ -171,7 +174,8 @@ sup a {
   text-decoration: none;
 }
 
-nav>a, header a {
+nav>a,
+header a {
   font-weight: bold;
   padding: 5px;
 }
@@ -252,10 +256,10 @@ article>hr::before {
 }
 
 mark {
-	background-color: var(--bg2);
-	color: var(--nm);
-	padding: 0px 5px;
-	font-family: 'Fira Code';
+  background-color: var(--bg2);
+  color: var(--nm);
+  padding: 0px 5px;
+  font-family: 'Fira Code';
 }
 
 .datebar {
@@ -386,7 +390,7 @@ aside {
 }
 
 .code-highlight {
-  overflow: scroll;
+  overflow: auto;
   background-color: var(--code-bg);
   color: var(--nm);
   border-radius: 10px;
@@ -485,10 +489,11 @@ footer nav {
     position: unset;
     padding: 0;
     width: 100%;
-    float:unset;
-    clear:unset;
+    float: unset;
+    clear: unset;
     margin: 2rem;
   }
+
   main {
     padding: 0;
     margin-top: 10px;
