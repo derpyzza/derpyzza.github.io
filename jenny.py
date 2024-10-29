@@ -79,76 +79,111 @@ posts = []
 def process_notes(post):
     soup = Soup(post, 'html.parser')
     # Link subscript counter
-    i = 1
+    note_count = 1
+    link_count = 1
     links = []
+    notes = []
     has_links = False
+    has_notes = False
     for a in soup.find_all('a'):
         href = a['href']
         if href.startswith("#"):
             continue
-        has_links = True
-        text = a.string
+        link_text = a.string
         if href == "_":
-            aside = soup.new_tag('span')
-            aside["class"] = "aside"
+            has_notes = True
+            aside = soup.new_tag('aside')
 
-            sm = soup.new_tag('small')
-            sm.string = f"{i}."
+            aside_num = soup.new_tag('b')
+            aside_num.string = f"{note_count}."
 
-            aside.append(sm)
+            aside.append(aside_num)
             aside.append(" ")
-            aside.append(text)
+            aside.append(link_text)
 
             sup = soup.new_tag('sup')
-            _a = soup.new_tag('a', href=f"#note-{i}")
-            _a["id"] = f"link-{i}"
-            _a.string = f"[{i}]"
+            sup['id'] = f"note-{note_count}-src"
+            _a = soup.new_tag('a', href=f"#note-{note_count}-dest")
+            _a.string = f"[{note_count}]"
             sup.append(_a)
 
             a.replace_with(sup)
-            sup.insert_after(aside)
-            links.append({"body": text})            
+            sup.parent.insert_after(aside)
+            notes.append({'body': link_text})            
+            note_count += 1
         else:
+            has_links = True
             # Is a proper link
             link = soup.new_tag('a')
+            link["id"] = f"link-{link_count}"
             link["href"] = href
-            link.string = text
-            link.append(" ")
-
-            sup = soup.new_tag('sup')
-            _a = soup.new_tag('a', href=f"#note-{i}")
-            _a["id"] = f"link-{i}"
-            _a.string = f"[{i}]"
-            sup.append(_a)
+            link.string = link_text
 
             a.replace_with(link)
-            link.insert_after(sup)
-            links.append({"body": href})
-        i += 1
-    return (has_links, links, str(soup))
+            links.append({'body': href, 'title': link_text})
+            link_count += 1
+    return (has_links, has_notes, { 'links': links, 'notes': notes }, str(soup))
 
-def build_footnotes(post, links):
+def build_footnotes(post, links, has_links, has_notes):
+
+    if not has_links and not has_notes:
+        return post
+
+    notes = links['notes']
+    links = links['links']
+    
     soup = Soup(post, 'html.parser')
     sec = soup.new_tag('section')
-    title = soup.new_tag('h2')
-    title.string = "Footnotes + Links"
-    sec.append(title)
-    ls = soup.new_tag('ul')
-    j = 1
-    for link in links:
-        li = soup.new_tag('li')
-        li['id'] = f"note-{j}"
+    sec['id'] = "backmatter"
 
-        a = soup.new_tag('a', href=f"#link-{j}")
-        a.string = f"[{j}]"
+    if has_notes:
+        # === Notes handling ===
+        title = soup.new_tag('h2')
+        title.string = "Footnotes"
+        sec.append(title)
+        ls = soup.new_tag('ol')
+        i = 1
 
-        li.append(a)
-        li.append(" ")
-        li.append(link["body"])
+        for note in notes:
+            li = soup.new_tag('li')
+            li['id'] = f"note-{i}-dest" 
 
-        ls.append(li)
-        j += 1
-    sec.append(ls)
+            li.append(note['body'])
+
+            backlink = soup.new_tag('a', href=f"#note{i}-src")
+            backlink.append('↩')
+
+            li.append(" ")
+            li.append(backlink)
+            ls.append(li)
+            i += 1
+        sec.append(ls)
+    # === Notes handling ===
+
+    if has_links:
+        # === Links handling ===
+        title = soup.new_tag('h2')
+        title.string = "Links"
+        sec.append(title)
+        ls = soup.new_tag('ul')
+        i = 1
+        for link in links:
+            li = soup.new_tag('li')
+            link_name = soup.new_tag('b')
+            link_name.append(f"{link['title']}:")
+
+            li.append(link_name)
+            li.append(" ")
+            li.append(link['body'])
+
+            a = soup.new_tag('a', href=f"#link-{i}")
+            a.string = "↩"
+
+            li.append(a)
+            ls.append(li)
+            i += 1
+        sec.append(ls)
+        # === Links handling ===
     soup.append(sec)
     return str(soup)
 
@@ -188,10 +223,7 @@ def process_headings( post, is_index = False ):
     table_root['class'] = "toc"
 
     title = soup.new_tag('a', href=" ")
-    if not is_index:
-        title.append("Title")    
-    else:
-        title.append("Table of contents")    
+    title.append("Table of contents")    
 
     table_root.append(title)
     table_soup.append(table_root)
@@ -208,8 +240,8 @@ def process_headings( post, is_index = False ):
         h_text = h.text
         head = soup.new_tag(f"h{level + 1}")
 
-        head['id'] = f"h{count}"
-        href = f"#h{count}"
+        head['id'] = f"{h_text.replace(' ', '-').lower()}"
+        href = f"#{h_text.replace(' ', '-').lower()}"
         a = soup.new_tag('a', href=href)
         a.append("#")
 
@@ -298,10 +330,9 @@ def process_posts():
             post['post_content'] = markdown.markdown( post["post_content"] )
 
             if not (file.name == "src/archive.md"):
-                (ok, links, post['post_content']) = process_notes(post['post_content'])
+                (has_links, has_notes, links, post['post_content']) = process_notes(post['post_content'])
                 post['post_content'] = process_headings(post['post_content'])
-                if ok:
-                    post['post_content'] = build_footnotes(post['post_content'], links)                
+                post['post_content'] = build_footnotes(post['post_content'], links, has_links, has_notes)                
             post['post_content'] = process_code_blocks(post['post_content'])
 
         file_name = os.path.basename( f )

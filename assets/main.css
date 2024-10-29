@@ -266,12 +266,14 @@ mark {
 }
 
 #toc {
-  display: inline;
+  display: block;
   float: right;
-  left: 2%;
+  clear: right;
+  left: 1%;
   top: 160px;
   position: fixed;
-  width: 20vw;
+  max-width: 26ch;
+  word-wrap: break-word;
   margin-right: -22vw;
 }
 
@@ -320,11 +322,11 @@ mark {
   color: #438fd6;
 }
 
-a[href^="#link-"] {
+section[id="backmatter"] a {
   text-decoration: none;
 }
 
-aside, .aside {
+.aside {
   clear: right;
   float: right;
   position: relative;
@@ -339,10 +341,46 @@ aside, .aside {
   margin: 10px 0px;
   max-width: 30ch;
   line-height: 1.5rem;
-  margin-right: -26rem;
+  margin-right: -20rem;
 }
 
-aside b {
+.right {
+  clear: left;
+  float: left;
+  position: relative;
+  width: 20vw;
+  padding: 1rem;
+  background-color: var(--side-bg);
+  color: var(--nm);
+  font-size: .85rem;
+  font-weight: normal;
+  /* border-radius: 8px; */
+  border-left: 4px solid var(--dc);
+  margin: 10px 0px;
+  max-width: 30ch;
+  line-height: 1.5rem;
+  margin-left: -20rem;
+}
+
+.aside ul {
+  padding: 0;
+}
+
+aside {
+  clear: right;
+  float: right;
+  position: relative;
+  width: 20vw;
+  color: var(--li);
+  font-size: .85rem;
+  font-weight: normal;
+  margin: 10px 0px;
+  max-width: 30ch;
+  line-height: 1.5rem;
+  margin-right: -18rem;
+}
+
+.aside b {
   display: block;
   margin-bottom: 6px;
 }
@@ -418,12 +456,16 @@ footer nav {
 }
 
 @media screen and (max-width: 1400px) {
-  aside {
+  .aside {
     float: unset;
     clear: unset;
     margin: 10px 0px;
     width: 90%;
     max-width: unset;
+  }
+
+  aside {
+    display: none;
   }
 
   hgroup {
@@ -432,16 +474,21 @@ footer nav {
 
   #toc {
     position: unset;
-    top: unset;
-    margin: unset;
     padding: 0;
-    right: unset;
     width: 100%;
     margin: 2rem;
   }
 }
 
 @media screen and (max-width: 900px) {
+  #toc {
+    position: unset;
+    padding: 0;
+    width: 100%;
+    float:unset;
+    clear:unset;
+    margin: 2rem;
+  }
   main {
     padding: 0;
     margin-top: 10px;
