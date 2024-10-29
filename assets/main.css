@@ -474,18 +474,8 @@ footer nav {
 
   hgroup {
     margin-bottom: 1rem;
-  }
-
-  #toc {
-    position: unset;
-    padding: 0;
-    width: 100%;
-    margin: 2rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #toc {
+  } 
+#toc {
     position: unset;
     padding: 0;
     width: 100%;
@@ -493,7 +483,10 @@ footer nav {
     clear: unset;
     margin: 2rem;
   }
+}
 
+@media screen and (max-width: 900px) {
+ 
   main {
     padding: 0;
     margin-top: 10px;

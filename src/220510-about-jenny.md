@@ -3,7 +3,6 @@
 @post_date 2022.05.10
 ---
 
-# Jenny
 i've been wanting to start a small blog to kinda document my projects and stuff for a while now, and a couple days ago i decided to just sit down and finally make one. going into it however, i had some requirements i needed to satisfy:
 
 - the site needed to be lightweight. like *really* lightweight. like fits-in-under-512-kb-so-i-can-join-the-[512kb-club][1] lightweight.

@@ -51,8 +51,10 @@ def pretty_date( date ):
 # extract any variables in a file.
 def preprocess_file(file):
     vars = {
-        "post_content": "",
-        "file_name": file.name,
+        'post_content': "",
+        'generate_toc': True,
+        'post_languages': ['en'],
+        'file_name': file.name,
     }
     keep_scanning = True
     for line in file:
@@ -66,7 +68,14 @@ def preprocess_file(file):
             if len(args) == 1:
                 args = "".join(args)
 
-            vars[command] = args
+            if command == 'generate_toc':
+                if args[0].strip().lower() == 'false':
+                    vars['generate_toc'] = False;
+                # default case
+                else:
+                    vars['generate_toc'] = True
+            else:
+                vars[command] = args
         elif stripped.startswith("---"):
             keep_scanning = False
             continue
@@ -187,28 +196,10 @@ def build_footnotes(post, links, has_links, has_notes):
     soup.append(sec)
     return str(soup)
 
-def generate_table_links ( headings, ul ):
-    soup = Soup(str(ul), 'html.parser')
-    for h in headings:
-        if h['has_children']:
-            subl = soup.new_tag('ul')
-            soup.append(generate_table_links(h, subl))
-        else:
-            a = soup.new_tag('a', href=h['href'])
-            li = soup.new_tag('li')
-            li.append(h['title'])
-
-            a.append("#")
-            a.append(" ")
-            a.append(li)
-
-            soup.append(a)
-    return str(soup)
-
 """
     Turns all headings into links to the header, plus generates a table of content for the page
 """
-def process_headings( post, is_index = False ):
+def process_headings( post, generate_toc = True ):
     soup = Soup(post, 'html.parser')
 
     count = 0
@@ -231,6 +222,8 @@ def process_headings( post, is_index = False ):
     current_ul = table_root
     ul_stack = [table_root]
     prev_level = 1
+
+    first = None
 
     for h in headings:
         if h.text == 'Archive' or h.text == "Notice" or h.text == "Note" or h.text == 'Hint':
@@ -255,6 +248,8 @@ def process_headings( post, is_index = False ):
         head.append(h_text)
 
         h.replace_with(head)
+        if first == None:
+            first = head
         if level > prev_level:
 
             new_ul = table_soup.new_tag("ul")
@@ -270,12 +265,17 @@ def process_headings( post, is_index = False ):
         current_ul.append(a_tag)
         prev_level = level
 
+    # skip toc generation
+    if not generate_toc:
+        return str(soup)
+        
+
     table = soup.new_tag('div')
     table['id'] = "toc"
 
     table.append(table_soup)
 
-    soup.insert(0, table)
+    first.insert_before(table)
 
     return str(soup)
     pass
@@ -331,7 +331,7 @@ def process_posts():
 
             if not (file.name == "src/archive.md"):
                 (has_links, has_notes, links, post['post_content']) = process_notes(post['post_content'])
-                post['post_content'] = process_headings(post['post_content'])
+                post['post_content'] = process_headings(post['post_content'], post['generate_toc'])
                 post['post_content'] = build_footnotes(post['post_content'], links, has_links, has_notes)                
             post['post_content'] = process_code_blocks(post['post_content'])
 
@@ -377,7 +377,7 @@ def process_index(file: str):
     with open (file_name, 'w') as f:
         index = index.replace("{{content}}", content)
         index = index.replace("{{title}}", file.capitalize())
-        index = index.replace("{{posts}}", process_headings(list, True))
+        index = index.replace("{{posts}}", process_headings(list, False))
         f.write(index)
 
 def create_new_post(name: str):
