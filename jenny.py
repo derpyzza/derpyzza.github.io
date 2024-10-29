@@ -336,7 +336,7 @@ def process_posts():
             post['post_content'] = process_code_blocks(post['post_content'])
 
         file_name = os.path.basename( f )
-        destination = os.path.join( out_dir , os.path.splitext( file_name )[ 0 ] + ".html" )
+        destination = os.path.join( out_dir , os.path.splitext( file_name )[ 0 ][7:] + ".html" )
         post["dest"] = destination
         destination.rstrip(".md")
 
