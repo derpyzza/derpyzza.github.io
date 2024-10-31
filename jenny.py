@@ -110,7 +110,7 @@ def process_notes(post):
             aside.append(" ")
             aside.append(link_text)
 
-            sup = soup.new_tag('sup')
+            sup = soup.new_tag('small')
             sup['id'] = f"note-{note_count}-src"
             _a = soup.new_tag('a', href=f"#note-{note_count}-dest")
             _a.string = f"[{note_count}]"

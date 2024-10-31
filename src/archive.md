@@ -1,1 +1,3 @@
-Here's all of my blogposts. They're written on various subjects, mostly on whatever catches my interest at the time of writing the post.
+I like to write about random stuff sometimes, primarily software stuff but generally just whatever catches my interest enough for me to write about. I don't write very often, though I am trying to increase my writing output as time passes. I believe that being able to write, and more importantly, write *well* is a very important and under-rated skill that anyone would only benifit from having in their arsenal. To that end, this page, and really, this entire site, was created to give me a place to store my writings, whenever the want to write strikes me ( which, to be honest, happens extremely rarely ). The ability to use this site as a sort of portfolio is just a bonus that comes with it :)
+
+Here's a list of posts that i've written, listed in order from most to least recent:

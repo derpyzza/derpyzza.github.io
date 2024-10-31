@@ -37,7 +37,7 @@
   --code-box-side-bg: #000;
   --code-box-side-fg: #fff;
 
-  --wi: 80ch
+  --wi: 700px;
     /*max width*/
 }
 
@@ -48,9 +48,9 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f4ecd8;
+    --bg: #fff;
     --bg2: #dbc6b2;
-    --nm: #1a110b;
+    --nm: #0a0909;
     --li: #73563a;
     --side-bg: #dbc6b2;
     --note-bg: #ffd9bc;
@@ -59,9 +59,13 @@
     --code-box-side-bg: #000;
     --code-box-side-fg: #fff;
     --dc: #917e71;
-    --ac: #df5b3e;
+    --ac: #b83518;
     --a2: #fda572;
     --vi: #b83623;
+  }
+
+  .light-only {
+    display: inline-block !important;
   }
 }
 
@@ -71,14 +75,16 @@
   margin: 0;
 }
 
+.light-only {
+  display: none;
+}
+
 body {
   padding: 4rem 1rem 1rem;
   color: var(--nm);
   background-color: var(--bg);
   line-height: 155%;
-  /* background-color: #0f0f0f; */
-  font-family: 'Noto Sans';
-  /* font-size: 18px; */
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
 }
 
 header,
@@ -90,6 +96,12 @@ section {
   word-wrap: break-word;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 section,
 h2,
 h3,
@@ -97,20 +109,9 @@ h4 {
   margin-top: 2rem;
 }
 
-.infobox h2,
-.infobox h3,
-.infobox h4 {
-  margin-top: 0;
-}
-
 sup a {
   font-weight: bolder;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-decoration: none;
 }
 
 header a {
@@ -122,11 +123,41 @@ header a:hover {
   color: var(--ac) !important;
 }
 
+a {
+  color: var(--ac);
+  text-decoration: underline var(--ac);
+}
+
+a:hover,
+a:visited:hover {
+  color: var(--a2);
+  text-decoration: none;
+}
+
+/* section[id="backmatter"] a { */
+  /* text-decoration: none; */
+/* } */
+
+nav>a,
+header a {
+  font-weight: bold;
+  padding: 5px;
+}
+
+#toc a,
+.datebar a {
+  color: var(--li);
+  text-decoration: none;
+}
+
+#toc a:hover,
+.datebar a:hover {
+  color: var(--ac);
+}
+
 main {
   border-radius: 20px;
-  padding: 60px;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  padding: 4rem 60px;
 }
 
 hgroup {
@@ -154,34 +185,6 @@ blockquote {
   margin-left: 1rem;
 }
 
-/* === LINKS === */
-
-a {
-  color: var(--ac);
-  text-decoration: underline var(--ac);
-}
-
-a:hover,
-a:visited:hover {
-  color: var(--a2);
-  text-decoration: none;
-}
-
-/* a:visited {
-  color: var(--vi);
-} */
-sup a {
-  text-decoration: none;
-}
-
-nav>a,
-header a {
-  font-weight: bold;
-  padding: 5px;
-}
-
-/* === LINKS === */
-
 span {
   color: var(--dc);
   font-weight: bolder;
@@ -196,11 +199,7 @@ img {
   height: auto;
   max-width: var(--wi);
   border-radius: 10px;
-}
-
-time {
-  color: var(--li);
-  font-weight: bolder;
+  white-space:pre;
 }
 
 ul,
@@ -259,7 +258,7 @@ mark {
   background-color: var(--bg2);
   color: var(--nm);
   padding: 0px 5px;
-  font-family: 'Fira Code';
+  font-family: 'Fira Code', monospace;
 }
 
 .datebar {
@@ -281,17 +280,6 @@ mark {
   margin-right: -22vw;
 }
 
-#toc a,
-.datebar a {
-  color: var(--li);
-  text-decoration: none;
-}
-
-#toc a:hover,
-.datebar a:hover {
-  color: var(--ac);
-}
-
 .toc li:hover::marker {
   color: var(--ac);
 }
@@ -300,93 +288,18 @@ mark {
   content: "#";
 }
 
-.infobox {
-  padding: 18px;
-  border-radius: 4px;
-  border-bottom-right-radius: 20px;
-}
-
-.note {
-  border: 2px solid var(--ac);
-  background-color: var(--note-bg);
-}
-
-.note h3 {
-  color: var(--ac);
-}
-
-.hint {
-  border: 2px solid #438fd6;
-  background-color: var(--hint-bg);
-}
-
-.hint h3,
-.hint b,
-.hint strong {
-  color: #438fd6;
-}
-
-section[id="backmatter"] a {
-  text-decoration: none;
-}
-
-.aside {
-  clear: right;
-  float: right;
-  position: relative;
-  width: 20vw;
-  padding: 1rem;
-  background-color: var(--side-bg);
-  color: var(--nm);
-  font-size: .85rem;
-  font-weight: normal;
-  /* border-radius: 8px; */
-  border-left: 4px solid var(--dc);
-  margin: 10px 0px;
-  max-width: 30ch;
-  line-height: 1.5rem;
-  margin-right: -20rem;
-}
-
-.right {
-  clear: left;
-  float: left;
-  position: relative;
-  width: 20vw;
-  padding: 1rem;
-  background-color: var(--side-bg);
-  color: var(--nm);
-  font-size: .85rem;
-  font-weight: normal;
-  /* border-radius: 8px; */
-  border-left: 4px solid var(--dc);
-  margin: 10px 0px;
-  max-width: 30ch;
-  line-height: 1.5rem;
-  margin-left: -20rem;
-}
-
-.aside ul {
-  padding: 0;
-}
-
 aside {
   clear: right;
   float: right;
   position: relative;
   width: 20vw;
   color: var(--li);
-  font-size: .85rem;
+  font-size: 1rem;
   font-weight: normal;
   margin: 10px 0px;
   max-width: 30ch;
   line-height: 1.5rem;
-  margin-right: -18rem;
-}
-
-.aside b {
-  display: block;
-  margin-bottom: 6px;
+  margin-right: -22rem;
 }
 
 .code-highlight {
@@ -397,13 +310,9 @@ aside {
   padding: 20px 20px 20px 10px;
 }
 
-.code-highlight code span {
-  font-weight: normal;
-}
-
 code {
   border-radius: 10px;
-  font-family: 'Fira Code';
+  font-family: 'Fira Code', monospace;
   color: var(--code-fg);
   background-color: var(--code-bg);
   width: 100%;
@@ -412,7 +321,8 @@ code {
 
 pre {
   counter-reset: line;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
 }
 
 pre code {
@@ -428,12 +338,6 @@ pre code::before {
   padding: 0 1em 0 0;
 }
 
-.post-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 div[class^="language-"]::before {
   content: attr(lang);
   position: relative;
@@ -442,8 +346,13 @@ div[class^="language-"]::before {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-top: 4rem;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
+  color: var(--dc);
 }
 
 nav {
@@ -460,7 +369,7 @@ footer nav {
 }
 
 @media screen and (max-width: 1400px) {
-  .aside {
+  .aside, .light-only {
     float: unset;
     clear: unset;
     margin: 10px 0px;
@@ -475,7 +384,8 @@ footer nav {
   hgroup {
     margin-bottom: 1rem;
   } 
-#toc {
+
+  #toc {
     position: unset;
     padding: 0;
     width: 100%;
@@ -492,33 +402,3 @@ footer nav {
     margin-top: 10px;
   }
 }
-
-.s {
-  color: rgb(146, 168, 93);
-}
-
-.n {
-  color: #f66f57;
-}
-
-.k {
-  color: #5c7edb;
-}
-
-.i {
-  color: #ffb;
-}
-
-.c {
-  color: #6e6060;
-}
-
-/*
-  code highlight groups: 
-
-  string
-  number
-  keyword
-  identifier
-  comment
-*/
