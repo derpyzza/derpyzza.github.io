@@ -55,6 +55,7 @@ def preprocess_file(file):
         'generate_toc': True,
         'post_languages': ['en'],
         'file_name': file.name,
+        'ignore_index': False,
     }
     keep_scanning = True
     for line in file:
@@ -67,15 +68,19 @@ def preprocess_file(file):
             # If only one item in list just convert it into a string
             if len(args) == 1:
                 args = "".join(args)
-
-            if command == 'generate_toc':
-                if args[0].strip().lower() == 'false':
-                    vars['generate_toc'] = False;
-                # default case
+                
+                if args.lower().strip() == 'false':
+                    print("FAAKLSE")
+                    vars[command] = False
+                elif args.lower().strip() == 'true':
+                    print("TRUEEE")
+                    vars[command] = True
                 else:
-                    vars['generate_toc'] = True
+                    vars[command] = args
             else:
                 vars[command] = args
+                print(f"vars: {vars}, cmd: {command}, args: {args}")
+
         elif stripped.startswith("---"):
             keep_scanning = False
             continue
@@ -303,7 +308,10 @@ def format_file(post, template):
     try:
         template = template.replace("{{title}}", post['post_title'])
         template = template.replace("{{content}}", post['post_content'])
-        template = template.replace("{{date}}", pretty_date(post['post_date']))
+        if 'post_date' in post:
+            template = template.replace("{{date}}", pretty_date(post['post_date']))
+        else:
+            template = template.replace("{{date}}", " ")
     except Exception as err:
         print(f"Error: could not process file {post["file_name"]}, err: {err}")
         exit()
@@ -333,7 +341,7 @@ def process_posts():
                 (has_links, has_notes, links, post['post_content']) = process_notes(post['post_content'])
                 post['post_content'] = process_headings(post['post_content'], post['generate_toc'])
                 post['post_content'] = build_footnotes(post['post_content'], links, has_links, has_notes)                
-            post['post_content'] = process_code_blocks(post['post_content'])
+            # post['post_content'] = process_code_blocks(post['post_content'])
 
         file_name = os.path.basename( f )
         destination = os.path.join( out_dir , os.path.splitext( file_name )[ 0 ][7:] + ".html" )
@@ -361,6 +369,8 @@ def process_index(file: str):
     file_name = f"{out_dir}/{file}.html"
 
     for post in reversed(posts):
+        if post['ignore_index']:
+            continue
         year = "".join(post['post_date']).split('.')[0]
         if not (year == last_year):
             # Nasty little hack, but i have a slight headache and i'm losing 

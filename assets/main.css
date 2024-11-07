@@ -303,20 +303,14 @@ aside {
 }
 
 .code-highlight {
-  overflow: auto;
-  background-color: var(--code-bg);
-  color: var(--nm);
-  border-radius: 10px;
-  padding: 20px 20px 20px 10px;
+
 }
 
 code {
-  border-radius: 10px;
   font-family: 'Fira Code', monospace;
-  color: var(--code-fg);
-  background-color: var(--code-bg);
-  width: 100%;
-  margin-left: 16px;
+  color: var(--vi);
+  padding: 2px 6px;
+  /* background-color: var); */
 }
 
 pre {
@@ -327,6 +321,12 @@ pre {
 
 pre code {
   counter-increment: line;
+  width: 100%;
+  overflow: auto;
+  background-color: var(--code-bg);
+  color: var(--nm);
+  border-radius: 10px;
+  padding: 20px 20px 20px 10px;
 }
 
 pre code::before {
