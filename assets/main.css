@@ -59,13 +59,17 @@
     --code-box-side-bg: #000;
     --code-box-side-fg: #fff;
     --dc: #917e71;
-    --ac: #b83518;
+    --ac: #ee5331;
     --a2: #fda572;
     --vi: #b83623;
   }
 
   .light-only {
     display: inline-block !important;
+  }
+
+  pre, pre code {
+    color: var(--bg) !important;
   }
 }
 
@@ -111,27 +115,27 @@ h4 {
 
 sup a {
   font-weight: bolder;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 header a {
-  color: var(--dc);
-  text-decoration: none;
+  color: var(--ac);
+  /* text-decoration: none; */
 }
 
 header a:hover {
-  color: var(--ac) !important;
+  color: var(--a2) !important;
 }
 
 a {
   color: var(--ac);
-  text-decoration: underline var(--ac);
+  text-decoration: underline;
 }
 
 a:hover,
 a:visited:hover {
   color: var(--a2);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 /* section[id="backmatter"] a { */
@@ -147,7 +151,7 @@ header a {
 #toc a,
 .datebar a {
   color: var(--li);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 #toc a:hover,
@@ -180,13 +184,14 @@ p {
 }
 
 blockquote {
-  padding: 1rem;
-  border: solid 1 var(--ac);
+  display: block;
+  padding: 4px 2rem;
+  border-left: solid 4px var(--dc);
   margin-left: 1rem;
 }
 
 span {
-  color: var(--dc);
+  color: var(--li);
   font-weight: bolder;
 }
 
@@ -238,7 +243,7 @@ hr {
 h2 a,
 h3 a,
 h4 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   font-style: italic;
   font-weight: bolder;
 }
@@ -302,14 +307,11 @@ aside {
   margin-right: -22rem;
 }
 
-.code-highlight {
-
-}
-
 code {
   font-family: 'Fira Code', monospace;
   color: var(--vi);
-  padding: 2px 6px;
+  padding: 2px 2px;
+  font-style: italic;
   /* background-color: var); */
 }
 
@@ -317,16 +319,17 @@ pre {
   counter-reset: line;
   font-size: 1rem;
   font-family: 'Fira Code', monospace;
-}
-
-pre code {
-  counter-increment: line;
   width: 100%;
   overflow: auto;
   background-color: var(--code-bg);
   color: var(--nm);
-  border-radius: 10px;
   padding: 20px 20px 20px 10px;
+  border-radius: 10px;
+}
+
+pre code {
+  counter-increment: line;
+  color: var(--nm);
 }
 
 pre code::before {
@@ -336,13 +339,6 @@ pre code::before {
   text-align: right;
   width: 2em;
   padding: 0 1em 0 0;
-}
-
-div[class^="language-"]::before {
-  content: attr(lang);
-  position: relative;
-  float: right;
-  color: var(--ac);
 }
 
 footer {

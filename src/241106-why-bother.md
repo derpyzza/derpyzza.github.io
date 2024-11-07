@@ -3,7 +3,10 @@
 @generate_toc false
 ---
 
-often times when working on a hobby project where you're attempting to (re-)create a custom version of something that already exists, you'll come across questions from other people that are always something along the lines of "`$THING` already exists, why are you making another one?".
+often times when working on a hobby project where you're attempting to (re-)create a custom version of something that already exists, you'll come across questions from other people that are always something along the lines of 
+
+> "`$THING` already exists, why are you making another one?".
+
 i have prepared a handy dandy list of rebuttals that can be used to counter their misplaced concerns.
 simply tick all that apply and send it over to them ( Or stick it somewhere on your project's documentation or website if it has those ).
 
@@ -11,16 +14,15 @@ the list will be updated as i come up with more rebuttals.
 
 here's the list:
 
-# I'm making $THING because:
+# i'm making $THING because:
 
 - [ ] it's fun
 - [ ] i felt like it
 - [ ] i bet i can sell this and get rich
-- [ ] making `$THING` will help me stroke my ego
 - [ ] it'll probably look real nice on my resumé
 - [ ] people will think i'm a cool person for having made my own `$THING`
-- [ ] *i* will think i'm a cool person for having made my own `$THING`
-- [ ] there arent *enough* versions of $THING out there already and there needs to be more!
+- [ ] ***i*** will think i'm a cool person for having made my own `$THING`
+- [ ] there arent *enough* versions of `$THING` out there already and there needs to be more!
 - [ ] it's trendy right now and i want to hop on the hype train myself
 - [ ] i'm bored out of my mind and if i don't distract myself with this i'm going to lose my mind
 - [ ] i happen to have the free will required to engage in this activity
